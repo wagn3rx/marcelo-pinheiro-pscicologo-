@@ -1,0 +1,383 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    
+    
+    <title>Marcelo Pinheiro | Psicólogo e Psicanalista</title>
+    <link rel="stylesheet" href="src/css/style.css" />
+  </head>
+  <body>
+    <header>
+      <span class="logo">
+        <h1>Marcelo Pinheiro</h1>
+        <small>Psicólogo • Psicanalista</small>
+      </span>
+      <nav>
+        <ul class="nav-link">
+          <li><a href="#atendimento">Atendimento</a></li>
+          <li><a href="#como-funciona">Como funciona</a></li>
+          <li><a href="#avaliacoes">Avaliações</a></li>
+          <li><a href="#ambiente">Ambiente</a></li>
+          <li><a href="#localizacao">Localização</a></li>
+          <li><a href="#faq">Dúvidas</a></li>
+        </ul>
+      </nav>
+      <a href="https://wa.me/5511982705683" class="btn btn-green"
+        >📅 Agendar Sessão</a
+      >
+    </header>
+
+    <main>
+      <section id="inicio" class="hero">
+        <div class="hero-descricao">
+          <h3>Atendimento Clínico</h3>
+          <h2>Um espaço de escuta, elaboração e transformação subjetiva.</h2>
+          <p>
+            Psicoterapia orientada pela psicanálise, com escuta ética e atenção
+            à singularidade de cada sujeito. Acolhimento para questões
+            emocionais, ansiedade, relações, conflitos internos, perdas e
+            decisões difíceis.
+          </p>
+          <a
+            class="btn btn-green"
+            href="https://wa.me/5511982705683?text=Olá,%20Marcelo.%20Gostaria%20de%20agendar%20uma%20sessão%20de%20acolhimento."
+            >📅 Agendar Sessão</a
+          >
+          <a class="btn btn-secundario" href="#como-funciona">Como funciona</a>
+          <p class="atd-exclusivo">
+            Atendimento exclusivo com horários limitados.
+          </p>
+        </div>
+        <div class="hero-image">
+          <img
+            src="src/img/marcelo atendimento.png"
+            alt="Marcelo Pinheiro Psicólogo"
+          />
+        </div>
+      </section>
+
+      <section id="atendimento" class="secao-carrossel">
+        <div class="container">
+          <h3>Para quem é</h3>
+          <h2>Atendimento para cada momento da vida.</h2>
+          <h2>
+            Cada sujeito possui uma forma singular de sofrer, desejar e existir.
+          </h2>
+          <div class="viewport">
+            <div class="trilho-cards" id="trilhocards-atendimento">
+              <div class="card-item active">
+                <img
+                  src="src/img/card_adolescentes_3c88f473.png"
+                  alt="Adolescentes"
+                />
+              </div>
+              <div class="card-item">
+                <img src="src/img/card_adultos_7195b901.png" alt="Adultos" />
+              </div>
+              <div class="card-item">
+                <img src="src/img/card_idosos_9e009fcd.png" alt="Idosos" />
+              </div>
+              <div class="card-item">
+                <img src="src/img/card_casais_0b09338c.png" alt="Casais" />
+              </div>
+            </div>
+          </div>
+          <div class="controles-carrossel">
+            <button
+              class="arrow arrow-prev"
+              onclick="moverEsquerda('trilhocards-atendimento')"
+            >
+              ‹
+            </button>
+
+            <button
+              class="arrow arrow-next"
+              onclick="moverDireita('trilhocards-atendimento')"
+            >
+              ›
+            </button>
+          </div>
+        </div>
+      </section>
+
+      <section id="como-funciona" class="secao-carrossel">
+        <div class="container">
+          <h3>Como funciona</h3>
+          <h2>Um processo acolhedor e humanizado</h2>
+          <h2>
+            A psicoterapia é um espaço de fala, escuta e elaboração. Ao longo
+            das sessões, trabalhamos questões emocionais, conflitos, angústias,
+            repetições e modos de relação que atravessam a experiência de cada
+            sujeito.
+          </h2>
+          <div class="viewport">
+            <div class="trilho-cards" id="trilhocards-funcionamento">
+              <div class="card-item active">
+                <img
+                  src="src/img/primeiro atendimento.png"
+                  alt="Primeiro atendimento"
+                />
+              </div>
+              <div class="card-item">
+                <img
+                  src="src/img/sessao acolimento.png"
+                  alt="Sessão de acolhimento"
+                />
+              </div>
+              <div class="card-item">
+                <img src="src/img/acompanhamento.png" alt="Acompanhamento" />
+              </div>
+            </div>
+          </div>
+          <div class="controles-carrossel">
+            <button
+              class="arrow arrow-prev"
+              onclick="moverEsquerda('trilhocards-funcionamento')"
+            >
+              ‹
+            </button>
+
+            <button
+              class="arrow arrow-next"
+              onclick="moverDireita('trilhocards-funcionamento')"
+            >
+              ›
+            </button>
+          </div>
+        </div>
+      </section>
+
+      <section id="abordagem" class="secao-carrossel">
+        <div class="container">
+          <h3>A abordagem</h3>
+          <h2>Os pilares do meu trabalho.</h2>
+          <div class="viewport">
+            <div class="trilho-cards" id="trilhocards-abordagem">
+              <div class="card-item active">
+                <img
+                  src="src/img/card_pilar_escuta_com_foto-eLn669XhgJA6ivJtkopLj7.webp"
+                  alt="Escuta"
+                />
+              </div>
+              <div class="card-item">
+                <img
+                  src="src/img/card_pilar_liberdade_com_foto-nY2MheQiFZpphJN232Aneo.webp"
+                  alt="Liberdade"
+                />
+              </div>
+              <div class="card-item">
+                <img
+                  src="src/img/card_pilar_orientacao_com_foto-iVzDFK7fdtXbtDzUr4NNxV.webp"
+                  alt="Orientação"
+                />
+              </div>
+            </div>
+          </div>
+          <div class="controles-carrossel">
+            <button
+              class="arrow arrow-prev"
+              onclick="moverEsquerda('trilhocards-abordagem')"
+            >
+              ‹
+            </button>
+
+            <button
+              class="arrow arrow-next"
+              onclick="moverDireita('trilhocards-abordagem')"
+            >
+              ›
+            </button>
+          </div>
+        </div>
+      </section>
+
+      <p class="frase-destaque">
+        “Falar pode transformar a forma como alguém vive sua própria história.”
+      </p>
+
+      <section id="avaliacoes" class="secao-carrossel">
+        <div class="container">
+          <h3>Avaliações</h3>
+          <h2>O que dizem os pacientes.</h2>
+          <div class="viewport">
+            <div class="trilho-cards" id="trilhocards-avaliacoes">
+              <div class="card-item active">
+                <img src="src/img/depoimento1.png" alt="Avaliação" />
+              </div>
+              <div class="card-item">
+                <img src="src/img/depoimento 2.png" alt="Avaliação" />
+              </div>
+              <div class="card-item">
+                <img src="src/img/depoimento 3.png" alt="Avaliação" />
+              </div>
+              <div class="card-item">
+                <img src="src/img/depoimento 4.png" alt="Avaliação" />
+              </div>
+              <div class="card-item">
+                <img src="src/img/depoimento 5.png" alt="Avaliação" />
+              </div>
+            </div>
+          </div>
+          <div class="controles-carrossel">
+            <button
+              class="arrow arrow-prev"
+              onclick="moverEsquerda('trilhocards-avaliacoes')"
+            >
+              ‹
+            </button>
+
+            <button
+              class="arrow arrow-next"
+              onclick="moverDireita('trilhocards-avaliacoes')"
+            >
+              ›
+            </button>
+          </div>
+        </div>
+      </section>
+
+   <section id="ambiente-seguro" class="container">
+    <img src="src/img/ico_shield_fb9d8b6a.png" alt="Ambiente seguro" />
+    
+    <div>
+        <h3>Ambiente seguro e confidencial</h3>
+        <p>Cada atendimento acontece em um espaço acolhedor, ético e com total sigilo profissional.</p>
+    </div>
+
+    <a href="https://wa.me/5511998765432" target="_blank" class="btn-whatsapp">
+    <img src="src/img/whatsapp.png" alt="Ícone WhatsApp" />
+</a>
+</section>
+
+      <section id="ambiente" class="secao-carrossel">
+        <div class="container">
+          <h3>Ambiente</h3>
+          <h2>Um espaço acolhedor e reservado.</h2>
+          <div class="viewport">
+            <div class="trilho-cards" id="trilhocards-ambiente">
+              <div class="card-item active">
+                <img src="src/img/consultorio.png" alt="Ambiente" />
+              </div>
+              <div class="card-item">
+                <img src="src/img/consultorio2.png" alt="Ambiente" />
+              </div>
+            </div>
+          </div>
+          <div class="controles-carrossel">
+            <button
+              class="arrow arrow-prev"
+              onclick="moverEsquerda('trilhocards-ambiente')"
+            >
+              ‹
+            </button>
+            <button
+              class="arrow arrow-next"
+              onclick="moverDireita('trilhocards-ambiente')"
+            >
+              ›
+            </button>
+          </div>
+        </div>
+      </section>
+
+      <section id="localizacao">
+    <div class="card-wrapper">
+        <img src="src/img/card_localizacao_83be0a2b.png" alt="Mapa Marcelo Pinheiro">
+        
+        <a href="https://www.google.com/maps/dir//Marcelo+Pinheiro+%2F+Psic%C3%B3logo+Cl%C3%ADnico+%2F+Vila+Andrade+(Morumbi)+-+CRP+06%2F188151,+Av.+Giovanni+Gronchi,+6195+-+sala+809+-+Vila+Andrade,+S%C3%A3o+Paulo+-+SP,+05727-160/@-23.6384172,-46.757523,15z/data=!4m8!4m7!1m0!1m5!1m1!1s0x94ce5108b77a1273:0x8485f0470786380e!2m2!1d-46.7367151!2d-23.6339733?entry=ttu&g_ep=EgoyMDI2MDYwMS4wIKXMDSoASAFQAw%3D%3D" target="_blank" class="btn-mapa btn-como-chegar"></a>
+        <a href="https://share.google/V8DQav5fbSIEboJT5" target="_blank" class="btn-mapa btn-ver-maps"></a>
+    </div>
+</section>
+
+      <section class="perguntas-frequentes" id="faq">
+        <div class="wrap">
+          <div class="gold-section-wrap">
+            <div class="section-head">
+              <span class="section-label">Dúvidas frequentes</span>
+              <h2 class="section-title">Perguntas frequentes.</h2>
+            </div>
+            <div class="faq-grid">
+              <details open>
+                <summary>Como funciona a primeira sessão?</summary>
+                <p>
+                  É um primeiro encontro de acolhimento e entendimento da
+                  demanda. A partir dele, Marcelo orienta como o processo pode
+                  seguir.
+                </p>
+              </details>
+              <details>
+                <summary>O atendimento é online ou presencial?</summary>
+                <p>
+                  O atendimento pode ser presencial no consultório em São Paulo
+                  ou online, conforme disponibilidade e necessidade do paciente.
+                </p>
+              </details>
+              <details>
+                <summary>Quanto tempo dura uma sessão?</summary>
+                <p>
+                  As sessões têm duração padrão de 50 minutos, com horários
+                  combinados previamente de acordo com a disponibilidade.
+                </p>
+              </details>
+              <details>
+                <summary>O atendimento é sigiloso?</summary>
+                <p>
+                  Sim. O atendimento psicológico segue princípios éticos de
+                  sigilo, cuidado e respeito à singularidade de cada paciente.
+                </p>
+              </details>
+              <details>
+                <summary>Preciso saber exatamente o que falar?</summary>
+                <p>
+                  Não. A análise começa justamente onde a pessoa está. Dúvidas,
+                  silêncio, confusão e angústia também fazem parte do processo.
+                </p>
+              </details>
+              <details>
+                <summary>Como agendar?</summary>
+                <p>
+                  Clique em qualquer botão "Agendar Sessão" na página e você
+                  será direcionado ao WhatsApp para combinar dia e horário.
+                </p>
+              </details>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section-on-gold">
+        <div class="wrap">
+          <div class="cta-band">
+            <div>
+              <h2>Talvez seja tempo de se escutar.</h2>
+              <p>
+                Questionar. Elaborar. Transformar algo em sua vida.<br> Estou aqui
+                para acompanhar esse processo com seriedade, escuta e cuidado.
+              </p>
+            </div>
+       <a href="https://wa.me/5511982705683" class="btn btn-green"
+        >📅 Agendar Sessão</a
+      >
+            
+          </div>
+        </div>
+      </section>
+
+      <footer>
+        <div class="wrap-foot">
+          <span
+            >© 2024 Marcelo Pinheiro. Todos os direitos reservados. CRP
+            06/188151</span
+          >
+          <span>São Paulo, SP</span>
+        </div>
+      </footer>
+    </main>
+    <script src="src/js/script.js"></script>
+    <a href="https://wa.me/5511982705683" class="btn-whatsapp-float" target="_blank">
+  <img src="src/img/whatsapp.png" alt="WhatsApp">
+</a>
+  </body>
+</html>

@@ -1,0 +1,786 @@
+:root {
+  /* cores */
+  --gold: #c9902f;
+  --gold-soft: #e7c56e;
+  --gold-light: #f3dd9b;
+  --coffee-950: #1b0f0a;
+  --coffee-900: #26150d;
+  --coffee-800: #332016;
+  --coffee-700: #4a3020;
+  --coffee-600: #6b4c35;
+  --coffee-500: #9a7a62;
+  --cream: #fff7eb;
+  --cream-2: #f8ead2;
+  --cream-3: #ead3aa;
+  --green: #128c52;
+  --green-2: #25d366;
+  --shadow: 0 22px 70px rgba(25, 12, 6, 0.22);
+  --radius-xl: 34px;
+  --radius-lg: 26px;
+  --ease: cubic-bezier(0.2, 0.8, 0.2, 1);
+
+  /* fontes */
+
+  
+  --font-corpo: 'Inter', system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+  --font-titulo: "Playfair Display SC", "Georgia", serif;
+  --font-secundaria: "Playfair Display", "Times New Roman", serif;
+
+
+ 
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+
+html {
+  scroll-behavior: smooth;
+}
+
+.nav-link li a {
+  font-family: var(--font-corpo);
+}
+
+body {
+    font-family: var(--font-corpo);
+  margin: 0;
+  padding: 0;
+  min-height: 100vh; /* Garante que o gradiente cubra toda a altura da página */
+
+  /* O gradiente agora é uma camada de fundo sólida, mas refinada */
+  background:
+    radial-gradient(circle at 50% -20%, var(--gold-soft) 0%, transparent 60%),
+    linear-gradient(180deg, var(--coffee-950) 0%, var(--coffee-800) 100%);
+
+  background-attachment: fixed; /* Isso faz o fundo ficar fixo enquanto você rola o site */
+  font-family: var(--font-corpo);
+  color: var(--cream);
+}
+
+h1,
+h2 {
+  font-family: var(--font-corpo);
+}
+
+h3 {
+  font-family: var(--font-titulo);
+  text-transform: uppercase;
+  letter-spacing: 0.15em;
+  
+}
+
+
+/* criando o cabeçalho*/
+header {
+  height: 80px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 5%;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+
+  backdrop-filter: blur(22px);
+  border-bottom: 1px solid var(--gold-light);
+  box-shadow: var(--shadow);
+
+  background: rgba(107, 76, 53, 0.6);
+
+  backdrop-filter: blur(22px);
+  -webkit-backdrop-filter: blur(22px);
+
+  border-bottom: 1px solid rgba(243, 221, 155, 0.22);
+  box-shadow: var(--shadow);
+}
+
+.logo {
+  font-family: var(--font-titulo);
+  font-size: 10px;
+  
+  color: var(--cream);
+}
+
+small {
+  font-family: var(--font-corpo);
+
+  display: block;
+  font-size: 10px;
+  font-weight: 800;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: var(--gold-light);
+}
+
+.nav-link {
+  display: flex;
+  list-style: none;
+  gap: 30px;
+}
+
+.nav-link li a {
+  position: relative;
+  font-size: 14px;
+  font-weight: 700;
+  color: var(--cream-3);
+  text-decoration: none;
+  letter-spacing: 0.1em;
+  padding-bottom: 5px;
+}
+
+/* Efeito da linha de enbaixo dos links de navegação */
+.nav-link li a::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0%;
+  height: 2px;
+  background-color: var(--gold-light);
+  transition: width 1s var(--ease);
+}
+
+.nav-link li a:hover::after {
+  width: 100%;
+}
+
+.btn-green {
+  background: linear-gradient(135deg, var(--green) 0%, var(--green-2) 100%);
+  color: var(--cream);
+  padding: 14px 24px;
+  border-radius: 999px;
+  border: none;
+  cursor: pointer;
+  font-weight: bold;
+  transition: transform 0.25s var(--ease);
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+}
+
+.btn-green:hover {
+  transform: translateY(-3px);
+}
+
+/* primeira parte do site section inicio*/
+
+/* Container pai */
+
+.hero {
+  height: 650px;
+
+  background:
+    radial-gradient(
+      circle at 70% 12%,
+      rgba(255, 255, 255, 0.62),
+      transparent 26%
+    ),
+    radial-gradient(
+      circle at 18% 82%,
+      rgba(201, 144, 47, 0.22),
+      transparent 34%
+    ),
+    linear-gradient(135deg, #fff9ef 0%, #f7ead5 42%, #d9ad6a 76%, #8b5a2d 100%);
+  border-bottom: 1px solid rgba(255, 247, 235, 0.18);
+}
+
+.hero-descricao h2 {
+  font-size: 50px; /* Aumenta o tamanho do título */
+ 
+  margin-bottom: 24px; /* Cria um respiro maior entre o título e o parágrafo */
+  color: var(--coffee-950); /* Garante que a cor esteja suave */
+  letter-spacing: -0.035em;
+}
+
+.hero-descricao p {
+  font-size: 18px;
+  line-height: 1.5;
+  color: var(--coffee-800);
+  margin-bottom: 10px;
+  
+}
+.hero {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 80px 5%;
+  gap: 40px;
+  min-height: 80vh;
+}
+
+.hero-descricao {
+  flex: 1; /* Ocupa 50% do espaço */
+  max-width: 700px;
+}
+
+/* Agrupa os dois botões para o efeito de pulo */
+.btn-green:hover,
+.btn-secundario:hover {
+  transform: translateY(-3px);
+}
+
+/* Base comum para garantir que a animação seja suave em ambos */
+.btn-green,
+.btn-secundario {
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease;
+  display: inline-flex; /* Melhora o alinhamento */
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+.btn-secundario {
+  text-decoration: none;
+  padding: 16px 32px;
+  font-size: 16px;
+  background: var(--cream);
+  color: var(--coffee-900);
+  border: none;
+  box-shadow:
+    0 10px 30px rgba(25, 12, 6, 0.1),
+    inset 0 1px 0 rgba(255, 255, 255, 0.8);
+  border-radius: 30px;
+  margin-left: 15px;
+}
+
+.hero-image {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+}
+
+.hero-image img {
+  width: 100%;
+  max-width: 500px;
+  height: auto;
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow);
+}
+
+.hero-descricao .atd-exclusivo {
+  margin-top: 20px;
+  font-size: 12px;
+ 
+}
+
+/*seçoes dos darrosseis*/
+
+/* 1. O fundo da seção (O espaço escuro geral) */
+.secao-carrossel {
+  padding: 80px 20px;
+  background-color: transparent;
+}
+
+/* 2. O seu "Card Creme" centralizado */
+.container {
+  background-color: var(--cream);
+  max-width: 800px; /* Ajuste conforme necessário */
+  margin: 0 auto;
+  padding: 40px;
+  border-radius: 30px;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.15);
+  text-align: center;
+}
+
+/* 3. O "Palco" onde as imagens ficam empilhadas */
+.viewport {
+  position: relative;
+  width: 100%;
+  height: 450px; /* Garante que o palco tenha altura */
+  margin-top: 20px;
+  overflow: hidden;
+  background-color: #fdfbf7; /* Cor de fundo de segurança */
+}
+
+/* 4. O trilho agora serve apenas de container posicionado */
+.trilho-cards {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+/* 5. Cada card fica exatamente no mesmo lugar, um sobre o outro */
+.card-item {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0; /* Invisível */
+  transition: opacity 0.5s ease-in-out;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.card-item.active {
+  opacity: 1;
+  z-index: 2; /* Garante que o card ativo fique por cima */
+}
+.card-item img {
+  max-width: 90%;
+  max-height: 90%;
+  object-fit: contain;
+  border-radius: 20px;
+}
+
+/* Ajuste para as setas de controle */
+.controles-carrossel {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  margin-top: 20px;
+}
+
+.arrow {
+  background: var(--coffee-950);
+  color: var(--cream);
+  border: none;
+  padding: 10px 20px;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.dots-carrossel {
+  display: flex;
+  gap: 8px;
+}
+
+.dot {
+  width: 10px;
+  height: 10px;
+  background: var(--coffee-500);
+  border-radius: 50%;
+}
+
+.dot.active {
+  background: var(--gold);
+}
+
+/*botoes do carrossel*/
+
+/* 1. Container que garante o posicionamento dos botões sobre o carrossel */
+.secao-carrossel .container {
+  position: relative;
+}
+
+/* 2. Viewport: a "janela" que esconde o que não está ativo */
+.viewport {
+  position: relative;
+  width: 100%;
+  height: 450px; /* Ajuste conforme a altura das suas imagens */
+  overflow: hidden;
+  margin: 20px 0;
+}
+
+/* 3. Trilho: container das imagens */
+.trilho-cards {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+/* 4. Cards: empilhados com transição de opacidade */
+.card-item {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  transition: opacity 0.5s ease-in-out;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  pointer-events: none; /* Evita interferência nos cliques */
+}
+
+.card-item.active {
+  opacity: 1;
+  z-index: 1;
+  pointer-events: auto;
+}
+
+/* 5. Controles (Botões nas laterais) */
+.controles-carrossel {
+  position: absolute;
+  bottom: 20px; /* Distância da borda inferior */
+  right: 20px; /* Distância da borda direita */
+  display: flex;
+  gap: 10px; /* Espaço entre os dois botões */
+  z-index: 10;
+  pointer-events: none; /* Permite clicar através */
+}
+
+/* 6. Estilização dos botões redondos */
+.arrow {
+  pointer-events: auto;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background-color: rgba(255, 255, 255, 0.9);
+  border: none;
+  cursor: pointer;
+  font-size: 24px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  transition: all 0.3s ease; /* Esta linha faz a mágica da transição suave */
+  color: #333;
+}
+
+/* Adicione este bloco logo abaixo */
+.arrow:hover {
+  background-color: var(
+    --gold-light
+  ); /* Certifique-se que essa variável existe no seu :root */
+  color: white; /* Muda a cor da seta para branco para contrastar com o gold */
+  transform: scale(1.1); /* Cria um efeito de leve aumento ao passar o mouse */
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3); /* Aumenta um pouco a sombra no hover */
+}
+
+.frase-destaque {
+  text-align: center;
+  width: 900px;
+  background-color: rgba(255, 247, 235, 0.6);
+  font-size: 18px;
+  line-height: 1.6;
+  color: var(--coffee-950);
+  font-style: italic;
+  margin: auto;
+  border-radius: 24px;
+  padding: 30px 40px;
+}
+
+#ambiente-seguro {
+  display: grid;
+  /* Ícone (auto) | Texto (ocupa o resto com 1fr) | Botão (auto) */
+  grid-template-columns: auto 1fr auto;
+  align-items: center;
+  gap: 20px;
+  padding: 20px 30px;
+  background-color: var(--cream);
+  border: 1px solid var(--gold-soft);
+  border-radius: 15px;
+}
+
+/* Garante que o texto tenha largura e não seja comprimido pelo grid */
+#ambiente-seguro div {
+  min-width: 0; /* Isso é o "pulo do gato" para o texto aparecer no Grid */
+  overflow: hidden;
+}
+
+#ambiente-seguro p {
+  margin: 0;
+  font-size: 0.95rem;
+  color: var(--coffee-700);
+  
+}
+
+/* Seleciona apenas a imagem que está dentro da section com id ambiente-seguro */
+#ambiente-seguro > img {
+  width: 100px; /* Tamanho fixo para o ícone */
+  height: auto;
+  display: block;
+}
+
+.btn-whatsapp {
+  display: flex;
+  justify-content: center; /* Centraliza o ícone horizontalmente */
+  align-items: center; /* Centraliza o ícone verticalmente */
+  width: 100px; /* Largura do círculo */
+  height: 100px; /* Altura do círculo (igual à largura para ser redondo) */
+  background-color: var(--cream);
+  border-radius: 50%; /* Isso cria o formato circular */
+  text-decoration: none;
+  transition:
+    transform 0.3s ease,
+    background-color 0.3s;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+}
+
+.btn-whatsapp img {
+  width: 60%; /* O ícone vai ocupar 60% do tamanho do círculo */
+  height: auto;
+}
+
+.btn-whatsapp:hover {
+  background-color: #128c7e;
+  transform: scale(1.1); /* Dá um pulinho quando passa o mouse */
+}
+
+/*seção do mapa*/
+
+#localizacao {
+  display: flex; /* Ativa o Flexbox */
+  justify-content: center; /* Centraliza horizontalmente */
+  align-items: center; /* Centraliza verticalmente (se a seção tiver altura definida) */
+  padding: 40px 0; /* Um respiro para não grudar no topo/baixo */
+}
+
+/* Opcional: Se você quiser garantir que o card sempre fique centralizado */
+.card-wrapper {
+  margin: 0 auto; /* Centraliza o próprio elemento se o flex não estiver no pai */
+}
+.card-wrapper {
+  position: relative;
+  display: inline-block;
+  width: 500px; /* Largura fixa que você pediu */
+}
+
+.card-wrapper img {
+  width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 40px;
+}
+
+/* Configuração base dos botões */
+.btn-mapa {
+  position: absolute;
+  z-index: 10;
+  width: 170px;
+  height: 50px;
+
+  border-radius: 25px;
+  cursor: pointer;
+}
+
+.btn-como-chegar {
+  bottom: 97px;
+  left: 75px;
+}
+
+/* Posicionamento do segundo botão (Ver no Maps) */
+.btn-ver-maps {
+  bottom: 97px; /* Ajuste aqui a distância do fundo */
+  right: 70px; /* Ajuste aqui a distância da direita */
+}
+
+/* Efeito de hover para dar feedback ao usuário */
+.btn-mapa:hover {
+  background: rgba(255, 255, 255, 0.2);
+}
+
+.perguntas-frequentes {
+  font-size: 30px;
+  position: relative;
+  color: var(--coffee-950);
+  overflow: hidden;
+  padding: 54px 40px 42px; /* Aumentei um pouco o padding lateral para o texto não encostar na borda */
+  background:
+    radial-gradient(
+      circle at 100% 0%,
+      rgba(231, 182, 33, 0.616),
+      transparent 28%
+    ),
+    linear-gradient(
+      160deg,
+      rgba(240, 197, 138, 0.98) 0%,
+      rgba(241, 226, 200, 0.98) 55%,
+      rgba(248, 224, 177, 0.98) 100%
+    );
+  border: 1px solid rgba(243, 221, 155, 0.52);
+  border-radius: var(--radius-xl);
+  box-shadow:
+    var(--shadow),
+    inset 0 1px 0 rgba(255, 255, 255, 0.85),
+    inset 0 0 0 1px rgba(255, 255, 255, 0.36);
+
+  /* Adicione isso para centralizar o conteúdo interno */
+  max-width: 1200px;
+  margin: 40px auto;
+}
+
+.section-label {
+  font-size: 18px;
+  
+  color: var(--coffee-700);
+}
+.section-title {
+  font-size: 30px;
+  
+}
+
+/* Ajuste do conteúdo interno para combinar com o fundo claro */
+/* O grid continua igual, garantindo as 2 colunas */
+.faq-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+  margin-top: 30px;
+}
+
+/* O card de pergunta agora expande organicamente */
+details {
+  background: rgba(255, 255, 255, 0.4);
+  border: 1px solid rgba(193, 144, 47, 0.2);
+  border-radius: 15px;
+  padding: 20px;
+  transition: all 0.4s ease; /* Transição suave ao abrir */
+  cursor: pointer;
+  overflow: hidden; /* Garante que o conteúdo não vaze */
+}
+
+/* Quando aberto, damos um destaque */
+details[open] {
+  background: var(--cream);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  border-color: var(--gold);
+}
+
+/* A pergunta */
+summary {
+  font-size: 20px;
+  font-weight: 700;
+  list-style: none; /* Remove a seta padrão */
+}
+/* 1. Prepara o summary para receber a linha */
+summary {
+  position: relative; /* Essencial para a linha "ancorar" aqui */
+  cursor: pointer;
+  font-size: 20px;
+  font-weight: 700;
+  padding-bottom: 5px; /* Espaço entre o texto e a linha */
+  list-style: none;
+}
+
+/* 2. Cria a linha base (invisível) */
+summary::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0%; /* Começa com 0 */
+  height: 2px;
+  background-color: var(--gold); /* A cor que você preferir */
+  transition: width 1.0s var(--ease); /* Suavidade no efeito */
+}
+
+/* 3. A linha aparece ao passar o mouse na pergunta */
+summary:hover::after {
+  width: 100%;
+}
+
+/* 4. (Opcional) A linha fica fixa quando a pergunta estiver aberta */
+details[open] summary::after {
+  width: 100%;
+}
+/* A resposta (p) agora volta a ser parte do fluxo normal */
+details p {
+  font-size: 16px;
+
+  margin-top: 15px;
+  padding-top: 10px;
+  border-top: 1px solid rgba(193, 144, 47, 0.2);
+  color: var(--coffee-700);
+  line-height: 1.6;
+}
+
+/* --- ESTILIZAÇÃO GLOBAL SEGURA --- */
+/* Esta regra aplica as cores apenas a elementos que NÃO estão dentro da seção de FAQ */
+
+:not(#faq) h2 {
+  color: var(--coffee-600);
+  font-family: var(--font-corpo);
+}
+:not(#faq) h3 {
+  color: var(--coffee-950);
+  
+  font-family: var(--font-titulo);
+  color: var(--gold);
+  margin-bottom: 10px;
+}
+
+/* Opcional: Garante que o container do FAQ mantenha suas propriedades 
+   mesmo que outras regras globais sejam adicionadas depois */
+#faq {
+  color: var(--coffee-950);
+}
+
+/*seção tauvez seja tempo de se escutar*/
+
+.section-on-gold {
+  background: linear-gradient(135deg, var(--green-2) 0%, var(--green) 100%);
+  max-width: 1200px;
+  margin: 40px auto;
+  border-radius: 30px;
+  padding: 40px;
+}
+
+.cta-band {
+  font-size: 16px;
+ 
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 40px;
+}
+.cta-band div {
+  flex: 1;
+}
+.btn-green {
+  flex-shrink: 0;
+}
+
+.section-on-gold .cta-band h2 {
+  color: var(--cream-2) !important;
+  font-size: 30px;
+  font-family: var(--font-titulo);
+}
+
+.section-on-gold .cta-band p {
+  color: var(--cream-2) !important;
+  font-size: 18px;
+  font-weight: 500;
+}
+
+/* roda pé */
+footer {
+  padding: 30px 50px;
+  height: 80px;
+  background-color: var(--coffee-950);
+}
+
+.wrap-foot {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+/* Pega tudo que o seu botão original já tem e adiciona a posição fixa */
+.btn-whatsapp-float {
+  /* Reaproveita o estilo do seu botão original (o nome da classe pode variar, ajuste se necessário) */
+  position: fixed;
+  bottom: 80px;
+  right: 30px;
+  
+  
+  
+}
+
+
+.btn-whatsapp-float img {
+    
+  margin-right: 100px;
+  border-radius: 50%;
+
+  width: 90px; 
+  height: auto;
+}
+.btn-whatsapp-float {
+
+  transition: transform 0.3s cubic-bezier(0.2, 0.8, 0.2, 1);
+}
+.btn-whatsapp-float:hover {
+    
+  transform: scale(1.5); /* Dá um pulinho quando passa o mouse */
+}
