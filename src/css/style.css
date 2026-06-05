@@ -54,18 +54,26 @@ body {
 
   background-attachment: fixed; 
   font-family: var(--font-corpo);
-  color: var(--cream);
+  
 }
 
-h1,
+h1{
+  color: var(--gold);
+}
 h2 {
-  font-family: var(--font-corpo);
+  font-family: var(--font-titulo);
+  color: var(--coffee-800);
 }
 
 h3 {
+  color: var(--gold);
   font-family: var(--font-titulo);
   text-transform: uppercase;
   letter-spacing: 0.15em;
+}
+p {
+  font-family: var(--font-corpo);
+  font-size: 18px;
 }
 
 /* criando o cabeçalho*/
@@ -676,6 +684,7 @@ footer {
 }
 
 .wrap-foot {
+  color: var(--cream);
   display: flex;
   justify-content: space-between;
   align-items: center;
