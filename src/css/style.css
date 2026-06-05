@@ -545,45 +545,21 @@ small {
   background: rgba(255, 255, 255, 0.2);
 }
 
+/* --- SEÇÃO PERGUNTAS FREQUENTES --- */
 .perguntas-frequentes {
   font-size: 30px;
   position: relative;
   color: var(--coffee-950);
   overflow: hidden;
   padding: 54px 40px 42px; 
-  background:
-    radial-gradient(
-      circle at 100% 0%,
-      rgba(231, 182, 33, 0.616),
-      transparent 28%
-    ),
-    linear-gradient(
-      160deg,
-      rgba(240, 197, 138, 0.98) 0%,
-      rgba(241, 226, 200, 0.98) 55%,
-      rgba(248, 224, 177, 0.98) 100%
-    );
+  background: radial-gradient(circle at 100% 0%, rgba(231, 182, 33, 0.616), transparent 28%), 
+              linear-gradient(160deg, rgba(240, 197, 138, 0.98) 0%, rgba(241, 226, 200, 0.98) 55%, rgba(248, 224, 177, 0.98) 100%);
   border: 1px solid rgba(243, 221, 155, 0.52);
   border-radius: var(--radius-xl);
-  box-shadow:
-    var(--shadow),
-    inset 0 1px 0 rgba(255, 255, 255, 0.85),
-    inset 0 0 0 1px rgba(255, 255, 255, 0.36);
-
-  
+  box-shadow: var(--shadow), inset 0 1px 0 rgba(255, 255, 255, 0.85), inset 0 0 0 1px rgba(255, 255, 255, 0.36);
   max-width: 1200px;
   margin: 40px auto;
 }
-
-.section-label {
-  font-size: 18px;
-
-  color: var(--coffee-700);
-}
-.section-title {
-  font-size: 30px;
-}
-
 
 .faq-grid {
   display: grid;
@@ -592,58 +568,51 @@ small {
   margin-top: 30px;
 }
 
-
+/* --- ESTILO DO COMPONENTE DETAILS --- */
 details {
   background: rgba(255, 255, 255, 0.4);
   border: 1px solid rgba(193, 144, 47, 0.2);
   border-radius: 15px;
   padding: 20px;
-  transition: all 0.4s ease; /* Transição suave ao abrir */
   cursor: pointer;
-  overflow: hidden; /* Garante que o conteúdo não vaze */
+  overflow: hidden;
+  transition: all 0.4s ease;
 }
 
-/* A pergunta */
 summary {
+  position: relative;
   font-size: 20px;
   font-weight: 700;
-  list-style: none; 
-}
-/* 1. Prepara o summary para receber a linha */
-summary {
-  position: relative; 
-  cursor: pointer;
-  font-size: 20px;
-  font-weight: 700;
-  padding-bottom: 5px; 
-  list-style: none;
+  list-style: none; /* Remove setinha no Firefox */
+  outline: none;
 }
 
-/* 2. Cria a linha base (invisível) */
+/* Esconde a setinha padrão no Chrome/Safari */
+summary::-webkit-details-marker {
+  display: none;
+}
+
+/* Linha decorativa na pergunta */
 summary::after {
   content: "";
   position: absolute;
-  bottom: 0;
+  bottom: -5px;
   left: 0;
   width: 0%; 
   height: 2px;
-  background-color: var(--gold); /* A cor que você preferir */
-  transition: width 1s var(--ease); /* Suavidade no efeito */
+  background-color: var(--gold);
+  transition: width 0.4s ease;
 }
 
-/* 3. A linha aparece ao passar o mouse na pergunta */
-summary:hover::after {
-  width: 100%;
-}
-
-/* 4. (Opcional) A linha fica fixa quando a pergunta estiver aberta */
+summary:hover::after,
 details[open] summary::after {
   width: 100%;
 }
-/* A resposta (p) agora volta a ser parte do fluxo normal */
-details p {
-  font-size: 16px;
 
+/* A resposta (p) */
+details p {
+  display: none; 
+  font-size: 16px;
   margin-top: 15px;
   padding-top: 10px;
   border-top: 1px solid rgba(193, 144, 47, 0.2);
@@ -651,25 +620,15 @@ details p {
   line-height: 1.6;
 }
 
-/* --- ESTILIZAÇÃO GLOBAL SEGURA --- */
-/* Esta regra aplica as cores apenas a elementos que NÃO estão dentro da seção de FAQ */
-
-:not(#faq) h2 {
-  color: var(--coffee-600);
-  font-family: var(--font-corpo);
-}
-:not(#faq) h3 {
-  color: var(--coffee-950);
-
-  font-family: var(--font-titulo);
-  color: var(--gold);
-  margin-bottom: 10px;
+/* Mostra a resposta quando aberto */
+details[open] p {
+  display: block;
+  animation: fadeIn 0.4s ease;
 }
 
-/* Opcional: Garante que o container do FAQ mantenha suas propriedades 
-   mesmo que outras regras globais sejam adicionadas depois */
-#faq {
-  color: var(--coffee-950);
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(-10px); }
+  to { opacity: 1; transform: translateY(0); }
 }
 
 /*seção tauvez seja tempo de se escutar*/
