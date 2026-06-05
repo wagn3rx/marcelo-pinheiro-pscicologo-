@@ -776,27 +776,36 @@ footer {
     display: flex;
   }
 
+/* Substitua o bloco antigo por este abaixo */
   header nav {
-    display: none;
     position: absolute;
     top: 80px;
     left: 0;
     width: 100%;
     background: var(--coffee-500);
-    padding: 20px 0;
     box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
     z-index: 1000;
+    
+    /* Configurações da animação */
+    max-height: 0;
+    opacity: 0;
+    overflow: hidden;
+    visibility: hidden;
+    transition: all 0.4s ease-in-out;
   }
 
   header nav ul.nav-link {
     flex-direction: column;
     align-items: center;
+    padding: 20px 0; /* O padding foi movido para cá para não bugar a animação */
     gap: 20px;
     list-style: none;
   }
 
   #menu-toggle:checked ~ nav {
-    display: block;
+    max-height: 400px; /* Altura que o menu vai atingir ao abrir */
+    opacity: 1;
+    visibility: visible;
   }
 
   
