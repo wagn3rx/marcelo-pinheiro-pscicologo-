@@ -45,14 +45,14 @@ body {
   font-family: var(--font-corpo);
   margin: 0;
   padding: 0;
-  min-height: 100vh; /* Garante que o gradiente cubra toda a altura da página */
+  min-height: 100vh; 
 
-  /* O gradiente agora é uma camada de fundo sólida, mas refinada */
+  
   background:
     radial-gradient(circle at 50% -20%, var(--gold-soft) 0%, transparent 60%),
     linear-gradient(180deg, var(--coffee-950) 0%, var(--coffee-800) 100%);
 
-  background-attachment: fixed; /* Isso faz o fundo ficar fixo enquanto você rola o site */
+  background-attachment: fixed; 
   font-family: var(--font-corpo);
   color: var(--cream);
 }
@@ -162,8 +162,22 @@ small {
 
 /* primeira parte do site section inicio*/
 
+/* --- SEÇÃO HERO --- */
 .hero {
-  height: 650px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding-top: 140px;
+  padding-bottom: 80px;
+  padding-left: 20px;
+  padding-right: 20px;
+  gap: 30px;
+  width: 100%;
+  overflow: hidden;
+
+  
+  min-height: 1100px;
 
   background:
     radial-gradient(
@@ -181,10 +195,9 @@ small {
 }
 
 .hero-descricao h2 {
-  font-size: 50px; /* Aumenta o tamanho do título */
-
-  margin-bottom: 24px; /* Cria um respiro maior entre o título e o parágrafo */
-  color: var(--coffee-950); /* Garante que a cor esteja suave */
+  font-size: 50px;
+  margin-bottom: 24px;
+  color: var(--coffee-950);
   letter-spacing: -0.035em;
 }
 
@@ -194,23 +207,11 @@ small {
   color: var(--coffee-800);
   margin-bottom: 10px;
 }
-.hero {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  text-align: center;
-  padding-top: 140px; /* Aumente este valor se ainda estiver escondido */
-  padding-bottom: 80px;
-  padding-left: 20px;
-  padding-right: 20px;
-  gap: 30px;
-  width: 100%;
-  overflow: hidden;
-}
 
 .hero-image {
   width: 100%;
-  max-width: 800px;
+  max-width: 800px; 
+  margin: 0 auto 20px auto;
 }
 
 .hero-image img {
@@ -222,60 +223,22 @@ small {
 .hero-descricao {
   width: 90%;
   max-width: 800px;
-  margin: 0 auto; /* Centraliza o bloco de texto */
-} /* --- CORREÇÃO DA SEÇÃO HERO --- */
-.hero {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  text-align: center;
-  padding-top: 140px;
-  padding-bottom: 80px;
-  padding-left: 20px;
-  padding-right: 20px;
-  gap: 30px;
-  width: 100%;
-  overflow: hidden;
-  /* Mantenha seu fundo radial aqui */
-  background:
-    radial-gradient(
-      circle at 70% 12%,
-      rgba(255, 255, 255, 0.62),
-      transparent 26%
-    ),
-    radial-gradient(
-      circle at 18% 82%,
-      rgba(201, 144, 47, 0.22),
-      transparent 34%
-    ),
-    linear-gradient(135deg, #fff9ef 0%, #f7ead5 42%, #d9ad6a 76%, #8b5a2d 100%);
-  height: 1100px;/* se mestourr a telo ou o fundo do body ficar aparecendo e só trocar para min-height: 80vh;*/
-}
-
-.hero-image {
-  width: 100%;
-  max-width: 350px; 
-  margin: 0 auto 20px auto; 
-}
-
-.hero-descricao {
-  width: 90%;
-  max-width: 600px; 
   margin: 0 auto;
-  padding-top: 10px; 
+  padding-top: 10px;
 }
+
 .hero-descricao .btn-green,
 .hero-descricao .btn-secundario {
-  margin: 10px 5px; 
+  margin: 10px 5px;
 }
 /* --- CORREÇÃO DOS BOTÕES --- */
 .btn-green,
 .btn-secundario {
-    background-color: var(--cream);
-    padding: 10px;
-    border-radius: 30px;
-    text-decoration: none;
-    color: var(--coffee-900);
+  background-color: var(--cream);
+  padding: 10px;
+  border-radius: 30px;
+  text-decoration: none;
+  color: var(--coffee-900);
   position: relative;
   z-index: 10;
   display: inline-flex;
@@ -290,16 +253,14 @@ small {
 }
 /*seçoes dos darrosseis*/
 
-
 .secao-carrossel {
   padding: 80px 20px;
   background-color: transparent;
 }
 
-
 .container {
   background-color: var(--cream);
-  max-width: 800px; /* Ajuste conforme necessário */
+  max-width: 800px; 
   margin: 0 auto;
   padding: 40px;
   border-radius: 30px;
@@ -307,24 +268,24 @@ small {
   text-align: center;
 }
 
-/* 3. O "Palco" onde as imagens ficam empilhadas */
+
 .viewport {
   position: relative;
   width: 100%;
-  height: 450px; 
+  height: 450px;
   margin-top: 20px;
   overflow: hidden;
-  background-color: #fdfbf7; /* Cor de fundo de segurança */
+  background-color: #fdfbf7; 
 }
 
-/* 4. O trilho agora serve apenas de container posicionado */
+
 .trilho-cards {
   position: relative;
   width: 100%;
   height: 100%;
 }
 
-/* 5. Cada card fica exatamente no mesmo lugar, um sobre o outro */
+
 .card-item {
   position: absolute;
   top: 0;
@@ -340,7 +301,7 @@ small {
 
 .card-item.active {
   opacity: 1;
-  z-index: 2; /* Garante que o card ativo fique por cima */
+  z-index: 2; 
 }
 .card-item img {
   max-width: 90%;
@@ -349,7 +310,7 @@ small {
   border-radius: 20px;
 }
 
-/* Ajuste para as setas de controle */
+
 .controles-carrossel {
   display: flex;
   justify-content: center;
@@ -385,16 +346,16 @@ small {
 
 /*botoes do carrossel*/
 
-/* 1. Container que garante o posicionamento dos botões sobre o carrossel */
+
 .secao-carrossel .container {
   position: relative;
 }
 
-/* 2. Viewport: a "janela" que esconde o que não está ativo */
+
 .viewport {
   position: relative;
   width: 100%;
-  height: 450px; /* Ajuste conforme a altura das suas imagens */
+  height: 450px; 
   overflow: hidden;
   margin: 20px 0;
 }
@@ -418,7 +379,7 @@ small {
   display: flex;
   justify-content: center;
   align-items: center;
-  pointer-events: none;  */
+  pointer-events: none;
 }
 
 .card-item.active {
@@ -430,12 +391,12 @@ small {
 /* 5. Controles (Botões nas laterais) */
 .controles-carrossel {
   position: absolute;
-  bottom: 20px; 
-  right: 20px; 
+  bottom: 20px;
+  right: 20px;
   display: flex;
-  gap: 10px; 
+  gap: 10px;
   z-index: 10;
-  pointer-events: none; 
+  pointer-events: none;
 }
 
 /* 6. Estilização dos botões redondos */
@@ -456,14 +417,12 @@ small {
   color: #333;
 }
 
-/* Adicione este bloco logo abaixo */
+
 .arrow:hover {
-  background-color: var(
-    --gold-light
-  ); 
-  color: white;  contrastar com o gold */
-  transform: scale(1.1); 
-  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3); 
+  background-color: var(--gold-light);
+  color: white;
+  transform: scale(1.1);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
 }
 
 .frase-destaque {
@@ -481,7 +440,7 @@ small {
 
 #ambiente-seguro {
   display: grid;
-  
+
   grid-template-columns: auto 1fr auto;
   align-items: center;
   gap: 20px;
@@ -491,9 +450,8 @@ small {
   border-radius: 15px;
 }
 
-
 #ambiente-seguro div {
-  min-width: 0; 
+  min-width: 0;
   overflow: hidden;
 }
 
@@ -503,21 +461,20 @@ small {
   color: var(--coffee-700);
 }
 
-
 #ambiente-seguro > img {
-  width: 100px; 
+  width: 100px;
   height: auto;
   display: block;
 }
 
 .btn-whatsapp {
   display: flex;
-  justify-content: center; 
-  align-items: center; 
-  width: 100px; 
-  height: 100px; 
+  justify-content: center;
+  align-items: center;
+  width: 100px;
+  height: 100px;
   background-color: var(--cream);
-  border-radius: 50%; 
+  border-radius: 50%;
   text-decoration: none;
   transition:
     transform 0.3s ease,
@@ -526,7 +483,7 @@ small {
 }
 
 .btn-whatsapp img {
-  width: 60%; 
+  width: 60%;
   height: auto;
 }
 
@@ -538,20 +495,20 @@ small {
 /*seção do mapa*/
 
 #localizacao {
-  display: flex; /* Ativa o Flexbox */
-  justify-content: center; /* Centraliza horizontalmente */
-  align-items: center; /* Centraliza verticalmente (se a seção tiver altura definida) */
-  padding: 40px 0; /* Um respiro para não grudar no topo/baixo */
+  display: flex;
+  justify-content: center; 
+  align-items: center; 
+  padding: 40px 0; 
 }
 
-/* Opcional: Se você quiser garantir que o card sempre fique centralizado */
+
 .card-wrapper {
-  margin: 0 auto; /* Centraliza o próprio elemento se o flex não estiver no pai */
+  margin: 0 auto; 
 }
 .card-wrapper {
   position: relative;
   display: inline-block;
-  width: 500px; /* Largura fixa que você pediu */
+  width: 500px; 
 }
 
 .card-wrapper img {
@@ -593,7 +550,7 @@ small {
   position: relative;
   color: var(--coffee-950);
   overflow: hidden;
-  padding: 54px 40px 42px; /* Aumentei um pouco o padding lateral para o texto não encostar na borda */
+  padding: 54px 40px 42px; 
   background:
     radial-gradient(
       circle at 100% 0%,
@@ -613,7 +570,7 @@ small {
     inset 0 1px 0 rgba(255, 255, 255, 0.85),
     inset 0 0 0 1px rgba(255, 255, 255, 0.36);
 
-  /* Adicione isso para centralizar o conteúdo interno */
+  
   max-width: 1200px;
   margin: 40px auto;
 }
@@ -627,8 +584,7 @@ small {
   font-size: 30px;
 }
 
-/* Ajuste do conteúdo interno para combinar com o fundo claro */
-/* O grid continua igual, garantindo as 2 colunas */
+
 .faq-grid {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
@@ -636,7 +592,7 @@ small {
   margin-top: 30px;
 }
 
-/* O card de pergunta agora expande organicamente */
+
 details {
   background: rgba(255, 255, 255, 0.4);
   border: 1px solid rgba(193, 144, 47, 0.2);
@@ -647,26 +603,19 @@ details {
   overflow: hidden; /* Garante que o conteúdo não vaze */
 }
 
-/* Quando aberto, damos um destaque */
-details[open] {
-  background: var(--cream);
-  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
-  border-color: var(--gold);
-}
-
 /* A pergunta */
 summary {
   font-size: 20px;
   font-weight: 700;
-  list-style: none; /* Remove a seta padrão */
+  list-style: none; 
 }
 /* 1. Prepara o summary para receber a linha */
 summary {
-  position: relative; /* Essencial para a linha "ancorar" aqui */
+  position: relative; 
   cursor: pointer;
   font-size: 20px;
   font-weight: 700;
-  padding-bottom: 5px; /* Espaço entre o texto e a linha */
+  padding-bottom: 5px; 
   list-style: none;
 }
 
@@ -676,7 +625,7 @@ summary::after {
   position: absolute;
   bottom: 0;
   left: 0;
-  width: 0%; /* Começa com 0 */
+  width: 0%; 
   height: 2px;
   background-color: var(--gold); /* A cor que você preferir */
   transition: width 1s var(--ease); /* Suavidade no efeito */
@@ -776,10 +725,11 @@ footer {
 
 /* Pega tudo que o seu botão original já tem e adiciona a posição fixa */
 .btn-whatsapp-float {
-  /* Reaproveita o estilo do seu botão original (o nome da classe pode variar, ajuste se necessário) */
+  /* Reaproveita o estilo do seu botão original  */
   position: fixed;
-  bottom: 80px;
-  right: 30px;
+  bottom: 60px;
+  right: 20px;
+  z-index: 9999;
 }
 
 .btn-whatsapp-float img {
@@ -797,12 +747,13 @@ footer {
 }
 
 /* versao para celular*/
+
 /* 1. Esconde o checkbox que controla o menu */
 .menu-toggle {
   display: none;
 }
 
-/* 2. Configura o botão hambúrguer (só aparece no mobile) */
+/* 2. botão hambúrguer (só aparece no mobile) */
 .hamburger {
   display: none;
   cursor: pointer;
@@ -814,20 +765,17 @@ footer {
 .hamburger span {
   width: 30px;
   height: 3px;
-  background: var(
-    --gold
-  ); /* Certifique-se que essa variável exista no seu CSS */
+  background: var(--gold);
   border-radius: 2px;
 }
 
 /* 3. Regras para telas menores que 768px (celulares) */
-@media (max-width: 768px) {
-  /* Mostra o ícone no celular */
+@media (max-width: 820px) {
+  /* Menu Hambúrguer */
   .hamburger {
     display: flex;
   }
 
-  /* Esconde a navegação principal por padrão */
   header nav {
     display: none;
     position: absolute;
@@ -840,16 +788,129 @@ footer {
     z-index: 1000;
   }
 
-  /* Faz a lista dentro do nav ficar em coluna */
   header nav ul.nav-link {
     flex-direction: column;
     align-items: center;
     gap: 20px;
-    list-style: none; /* Remove bolinhas da lista */
+    list-style: none;
   }
 
-  /* Quando o checkbox for marcado, mostra o menu */
   #menu-toggle:checked ~ nav {
     display: block;
+  }
+
+  
+  .frase-destaque {
+    width: 90%;
+    margin: 20px auto;
+    padding: 20px;
+    display: block;
+    text-align: center;
+    word-wrap: break-word;
+  }
+
+  
+  #ambiente-seguro {
+    grid-template-columns: 1fr;
+    text-align: center;
+    padding: 30px;
+  }
+
+  .btn-whatsapp {
+    display: none;
+  }
+
+  #ambiente-seguro > img {
+    margin: 0 auto;
+    width: 80px;
+  }
+
+  /* Ajuste do  FAQ */
+  .faq-grid {
+    grid-template-columns: 1fr;
+  }
+
+  /* Ajuste do CTA Band */
+  .cta-band {
+    grid-template-columns: 1fr;
+    text-align: center;
+    padding: 30px 20px;
+  }
+
+  .cta-band .btn-green {
+    display: none;
+  }
+  .btn-whatsapp-float {
+    position: fixed;
+    bottom: 60px;
+    right: 20px;
+    width: 40px;
+    height: 40px;
+    background-color: #25d366;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    z-index: 9999;
+  }
+
+  .btn-whatsapp-float img {
+    width: 60%;
+    height: auto;
+    margin: 0; 
+  }
+  footer {
+    position: relative; 
+    z-index: 10;
+    background-color: var(--coffee-950);
+    border-top: 1px solid rgba(243, 221, 155, 0.1);
+    margin-top: 50px;
+  }
+
+  .wrap-foot {
+    height: 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap; 
+    gap: 20px;
+    color: var(--cream);
+    font-size: 14px;
+  }
+
+ 
+  .footer-info {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+  .hero-descricao .btn-green,
+  .hero-descricao .btn-secundario {
+    display: none;
+  }
+  header {
+    
+    justify-content: space-between;
+    padding: 0 20px;
+  }
+
+  .hamburger {
+    display: flex; 
+    order: 1; 
+  }
+
+  .logo {
+    order: 2; 
+    text-align: center;
+    position: absolute; 
+    left: 50%;
+    transform: translateX(-50%);
+    width: 60%; 
+  }
+
+  /* Faz com que o botão de agendamento (dentro do header) suma no celular */
+  header .btn-green {
+    display: none;
   }
 }
