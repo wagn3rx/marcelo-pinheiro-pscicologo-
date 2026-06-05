@@ -21,13 +21,10 @@
 
   /* fontes */
 
-  
-  --font-corpo: 'Inter', system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+  --font-corpo:
+    "Inter", system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
   --font-titulo: "Playfair Display SC", "Georgia", serif;
   --font-secundaria: "Playfair Display", "Times New Roman", serif;
-
-
- 
 }
 
 * {
@@ -35,7 +32,6 @@
   padding: 0;
   box-sizing: border-box;
 }
-
 
 html {
   scroll-behavior: smooth;
@@ -46,7 +42,7 @@ html {
 }
 
 body {
-    font-family: var(--font-corpo);
+  font-family: var(--font-corpo);
   margin: 0;
   padding: 0;
   min-height: 100vh; /* Garante que o gradiente cubra toda a altura da página */
@@ -70,9 +66,7 @@ h3 {
   font-family: var(--font-titulo);
   text-transform: uppercase;
   letter-spacing: 0.15em;
-  
 }
-
 
 /* criando o cabeçalho*/
 header {
@@ -101,7 +95,7 @@ header {
 .logo {
   font-family: var(--font-titulo);
   font-size: 10px;
-  
+
   color: var(--cream);
 }
 
@@ -168,8 +162,6 @@ small {
 
 /* primeira parte do site section inicio*/
 
-/* Container pai */
-
 .hero {
   height: 650px;
 
@@ -190,7 +182,7 @@ small {
 
 .hero-descricao h2 {
   font-size: 50px; /* Aumenta o tamanho do título */
- 
+
   margin-bottom: 24px; /* Cria um respiro maior entre o título e o parágrafo */
   color: var(--coffee-950); /* Garante que a cor esteja suave */
   letter-spacing: -0.035em;
@@ -201,73 +193,101 @@ small {
   line-height: 1.5;
   color: var(--coffee-800);
   margin-bottom: 10px;
-  
 }
 .hero {
   display: flex;
+  flex-direction: column;
   align-items: center;
-  justify-content: space-between;
-  padding: 80px 5%;
-  gap: 40px;
-  min-height: 80vh;
-}
-
-.hero-descricao {
-  flex: 1; /* Ocupa 50% do espaço */
-  max-width: 700px;
-}
-
-/* Agrupa os dois botões para o efeito de pulo */
-.btn-green:hover,
-.btn-secundario:hover {
-  transform: translateY(-3px);
-}
-
-/* Base comum para garantir que a animação seja suave em ambos */
-.btn-green,
-.btn-secundario {
-  transition:
-    transform 0.3s ease,
-    box-shadow 0.3s ease;
-  display: inline-flex; /* Melhora o alinhamento */
-  align-items: center;
-  justify-content: center;
-  cursor: pointer;
-}
-.btn-secundario {
-  text-decoration: none;
-  padding: 16px 32px;
-  font-size: 16px;
-  background: var(--cream);
-  color: var(--coffee-900);
-  border: none;
-  box-shadow:
-    0 10px 30px rgba(25, 12, 6, 0.1),
-    inset 0 1px 0 rgba(255, 255, 255, 0.8);
-  border-radius: 30px;
-  margin-left: 15px;
+  text-align: center;
+  padding-top: 140px; /* Aumente este valor se ainda estiver escondido */
+  padding-bottom: 80px;
+  padding-left: 20px;
+  padding-right: 20px;
+  gap: 30px;
+  width: 100%;
+  overflow: hidden;
 }
 
 .hero-image {
-  flex: 1;
-  display: flex;
-  justify-content: center;
+  width: 100%;
+  max-width: 800px;
 }
 
 .hero-image img {
   width: 100%;
-  max-width: 500px;
   height: auto;
-  border-radius: var(--radius-lg);
-  box-shadow: var(--shadow);
+  display: block;
 }
 
-.hero-descricao .atd-exclusivo {
-  margin-top: 20px;
-  font-size: 12px;
- 
+.hero-descricao {
+  width: 90%;
+  max-width: 800px;
+  margin: 0 auto; /* Centraliza o bloco de texto */
+} /* --- CORREÇÃO DA SEÇÃO HERO --- */
+.hero {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding-top: 140px;
+  padding-bottom: 80px;
+  padding-left: 20px;
+  padding-right: 20px;
+  gap: 30px;
+  width: 100%;
+  overflow: hidden;
+  /* Mantenha seu fundo radial aqui */
+  background:
+    radial-gradient(
+      circle at 70% 12%,
+      rgba(255, 255, 255, 0.62),
+      transparent 26%
+    ),
+    radial-gradient(
+      circle at 18% 82%,
+      rgba(201, 144, 47, 0.22),
+      transparent 34%
+    ),
+    linear-gradient(135deg, #fff9ef 0%, #f7ead5 42%, #d9ad6a 76%, #8b5a2d 100%);
+  height: 1000px;
 }
 
+.hero-image {
+  width: 100%;
+  max-width: 350px; abaixo */
+  margin: 0 auto 20px auto; /* Centraliza a imagem */
+}
+
+.hero-descricao {
+  width: 90%;
+  max-width: 600px; /* Reduzi um pouco a largura para o texto não ficar gigante */
+  margin: 0 auto;
+  padding-top: 10px; /* Espaço entre a foto e o texto */
+}
+.hero-descricao .btn-green,
+.hero-descricao .btn-secundario {
+  margin: 10px 5px; /* Margem pequena para os botões não grudarem */
+}
+/* --- CORREÇÃO DOS BOTÕES --- */
+.btn-green,
+.btn-secundario {
+    background-color: var(--cream);
+    padding: 10px;
+    border-radius: 30px;
+    text-decoration: none;
+    color: var(--coffee-900);
+  position: relative;
+  z-index: 10;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  transition: transform 0.3s var(--ease);
+}
+
+.btn-green:hover,
+.btn-secundario:hover {
+  transform: translateY(-3px);
+}
 /*seçoes dos darrosseis*/
 
 /* 1. O fundo da seção (O espaço escuro geral) */
@@ -481,7 +501,6 @@ small {
   margin: 0;
   font-size: 0.95rem;
   color: var(--coffee-700);
-  
 }
 
 /* Seleciona apenas a imagem que está dentro da section com id ambiente-seguro */
@@ -601,12 +620,11 @@ small {
 
 .section-label {
   font-size: 18px;
-  
+
   color: var(--coffee-700);
 }
 .section-title {
   font-size: 30px;
-  
 }
 
 /* Ajuste do conteúdo interno para combinar com o fundo claro */
@@ -661,7 +679,7 @@ summary::after {
   width: 0%; /* Começa com 0 */
   height: 2px;
   background-color: var(--gold); /* A cor que você preferir */
-  transition: width 1.0s var(--ease); /* Suavidade no efeito */
+  transition: width 1s var(--ease); /* Suavidade no efeito */
 }
 
 /* 3. A linha aparece ao passar o mouse na pergunta */
@@ -693,7 +711,7 @@ details p {
 }
 :not(#faq) h3 {
   color: var(--coffee-950);
-  
+
   font-family: var(--font-titulo);
   color: var(--gold);
   margin-bottom: 10px;
@@ -717,7 +735,7 @@ details p {
 
 .cta-band {
   font-size: 16px;
- 
+
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -762,25 +780,76 @@ footer {
   position: fixed;
   bottom: 80px;
   right: 30px;
-  
-  
-  
 }
 
-
 .btn-whatsapp-float img {
-    
   margin-right: 100px;
   border-radius: 50%;
 
-  width: 90px; 
+  width: 90px;
   height: auto;
 }
 .btn-whatsapp-float {
-
   transition: transform 0.3s cubic-bezier(0.2, 0.8, 0.2, 1);
 }
 .btn-whatsapp-float:hover {
-    
   transform: scale(1.5); /* Dá um pulinho quando passa o mouse */
+}
+
+/* versao para celular*/
+/* 1. Esconde o checkbox que controla o menu */
+.menu-toggle {
+  display: none;
+}
+
+/* 2. Configura o botão hambúrguer (só aparece no mobile) */
+.hamburger {
+  display: none;
+  cursor: pointer;
+  flex-direction: column;
+  gap: 6px;
+  padding: 10px;
+}
+
+.hamburger span {
+  width: 30px;
+  height: 3px;
+  background: var(
+    --gold
+  ); /* Certifique-se que essa variável exista no seu CSS */
+  border-radius: 2px;
+}
+
+/* 3. Regras para telas menores que 768px (celulares) */
+@media (max-width: 768px) {
+  /* Mostra o ícone no celular */
+  .hamburger {
+    display: flex;
+  }
+
+  /* Esconde a navegação principal por padrão */
+  header nav {
+    display: none;
+    position: absolute;
+    top: 80px;
+    left: 0;
+    width: 100%;
+    background: var(--coffee-500);
+    padding: 20px 0;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+    z-index: 1000;
+  }
+
+  /* Faz a lista dentro do nav ficar em coluna */
+  header nav ul.nav-link {
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    list-style: none; /* Remove bolinhas da lista */
+  }
+
+  /* Quando o checkbox for marcado, mostra o menu */
+  #menu-toggle:checked ~ nav {
+    display: block;
+  }
 }

@@ -3,17 +3,22 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    
-    
+
     <title>Marcelo Pinheiro | Psicólogo e Psicanalista</title>
     <link rel="stylesheet" href="src/css/style.css" />
   </head>
   <body>
     <header>
       <span class="logo">
-        <h1>Marcelo Pinheiro</h1>
-        <small>Psicólogo • Psicanalista</small>
+        <h1>Marcelo Pinheiro.</h1>
+        <small>Psicólogo • Psicanalista. <br />CRP-188151</small>
       </span>
+      <input type="checkbox" id="menu-toggle" class="menu-toggle" />
+      <label for="menu-toggle" class="hamburger">
+        <span></span>
+        <span></span>
+        <span></span>
+      </label>
       <nav>
         <ul class="nav-link">
           <li><a href="#atendimento">Atendimento</a></li>
@@ -31,6 +36,12 @@
 
     <main>
       <section id="inicio" class="hero">
+        <div class="hero-image">
+          <img
+            src="src/img/marcelo atendimento.png"
+            alt="Marcelo Pinheiro Psicólogo"
+          />
+        </div>
         <div class="hero-descricao">
           <h3>Atendimento Clínico</h3>
           <h2>Um espaço de escuta, elaboração e transformação subjetiva.</h2>
@@ -49,12 +60,6 @@
           <p class="atd-exclusivo">
             Atendimento exclusivo com horários limitados.
           </p>
-        </div>
-        <div class="hero-image">
-          <img
-            src="src/img/marcelo atendimento.png"
-            alt="Marcelo Pinheiro Psicólogo"
-          />
         </div>
       </section>
 
@@ -238,18 +243,25 @@
         </div>
       </section>
 
-   <section id="ambiente-seguro" class="container">
-    <img src="src/img/ico_shield_fb9d8b6a.png" alt="Ambiente seguro" />
-    
-    <div>
-        <h3>Ambiente seguro e confidencial</h3>
-        <p>Cada atendimento acontece em um espaço acolhedor, ético e com total sigilo profissional.</p>
-    </div>
+      <section id="ambiente-seguro" class="container">
+        <img src="src/img/ico_shield_fb9d8b6a.png" alt="Ambiente seguro" />
 
-    <a href="https://wa.me/5511998765432" target="_blank" class="btn-whatsapp">
-    <img src="src/img/whatsapp.png" alt="Ícone WhatsApp" />
-</a>
-</section>
+        <div>
+          <h3>Ambiente seguro e confidencial</h3>
+          <p>
+            Cada atendimento acontece em um espaço acolhedor, ético e com total
+            sigilo profissional.
+          </p>
+        </div>
+
+        <a
+          href="https://wa.me/5511998765432"
+          target="_blank"
+          class="btn-whatsapp"
+        >
+          <img src="src/img/whatsapp.png" alt="Ícone WhatsApp" />
+        </a>
+      </section>
 
       <section id="ambiente" class="secao-carrossel">
         <div class="container">
@@ -283,13 +295,24 @@
       </section>
 
       <section id="localizacao">
-    <div class="card-wrapper">
-        <img src="src/img/card_localizacao_83be0a2b.png" alt="Mapa Marcelo Pinheiro">
-        
-        <a href="https://www.google.com/maps/dir//Marcelo+Pinheiro+%2F+Psic%C3%B3logo+Cl%C3%ADnico+%2F+Vila+Andrade+(Morumbi)+-+CRP+06%2F188151,+Av.+Giovanni+Gronchi,+6195+-+sala+809+-+Vila+Andrade,+S%C3%A3o+Paulo+-+SP,+05727-160/@-23.6384172,-46.757523,15z/data=!4m8!4m7!1m0!1m5!1m1!1s0x94ce5108b77a1273:0x8485f0470786380e!2m2!1d-46.7367151!2d-23.6339733?entry=ttu&g_ep=EgoyMDI2MDYwMS4wIKXMDSoASAFQAw%3D%3D" target="_blank" class="btn-mapa btn-como-chegar"></a>
-        <a href="https://share.google/V8DQav5fbSIEboJT5" target="_blank" class="btn-mapa btn-ver-maps"></a>
-    </div>
-</section>
+        <div class="card-wrapper">
+          <img
+            src="src/img/card_localizacao_83be0a2b.png"
+            alt="Mapa Marcelo Pinheiro"
+          />
+
+          <a
+            href="https://www.google.com/maps/dir//Marcelo+Pinheiro+%2F+Psic%C3%B3logo+Cl%C3%ADnico+%2F+Vila+Andrade+(Morumbi)+-+CRP+06%2F188151,+Av.+Giovanni+Gronchi,+6195+-+sala+809+-+Vila+Andrade,+S%C3%A3o+Paulo+-+SP,+05727-160/@-23.6384172,-46.757523,15z/data=!4m8!4m7!1m0!1m5!1m1!1s0x94ce5108b77a1273:0x8485f0470786380e!2m2!1d-46.7367151!2d-23.6339733?entry=ttu&g_ep=EgoyMDI2MDYwMS4wIKXMDSoASAFQAw%3D%3D"
+            target="_blank"
+            class="btn-mapa btn-como-chegar"
+          ></a>
+          <a
+            href="https://share.google/V8DQav5fbSIEboJT5"
+            target="_blank"
+            class="btn-mapa btn-ver-maps"
+          ></a>
+        </div>
+      </section>
 
       <section class="perguntas-frequentes" id="faq">
         <div class="wrap">
@@ -353,14 +376,14 @@
             <div>
               <h2>Talvez seja tempo de se escutar.</h2>
               <p>
-                Questionar. Elaborar. Transformar algo em sua vida.<br> Estou aqui
-                para acompanhar esse processo com seriedade, escuta e cuidado.
+                Questionar. Elaborar. Transformar algo em sua vida.<br />
+                Estou aqui para acompanhar esse processo com seriedade, escuta e
+                cuidado.
               </p>
             </div>
-       <a href="https://wa.me/5511982705683" class="btn btn-green"
-        >📅 Agendar Sessão</a
-      >
-            
+            <a href="https://wa.me/5511982705683" class="btn btn-green"
+              >📅 Agendar Sessão</a
+            >
           </div>
         </div>
       </section>
@@ -368,16 +391,20 @@
       <footer>
         <div class="wrap-foot">
           <span
-            >© 2024 Marcelo Pinheiro. Todos os direitos reservados. CRP
-            06/188151</span
+            >© 2024 Marcelo Pinheiro. Todos os direitos reservados. CRP-
+            188151</span
           >
           <span>São Paulo, SP</span>
         </div>
       </footer>
     </main>
     <script src="src/js/script.js"></script>
-    <a href="https://wa.me/5511982705683" class="btn-whatsapp-float" target="_blank">
-  <img src="src/img/whatsapp.png" alt="WhatsApp">
-</a>
+    <a
+      href="https://wa.me/5511982705683"
+      class="btn-whatsapp-float"
+      target="_blank"
+    >
+      <img src="src/img/whatsapp.png" alt="WhatsApp" />
+    </a>
   </body>
 </html>
