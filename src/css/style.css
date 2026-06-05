@@ -249,24 +249,24 @@ small {
       transparent 34%
     ),
     linear-gradient(135deg, #fff9ef 0%, #f7ead5 42%, #d9ad6a 76%, #8b5a2d 100%);
-  height: 1000px;
+  height: 1100px;/* se mestourr a telo ou o fundo do body ficar aparecendo e só trocar para min-height: 80vh;*/
 }
 
 .hero-image {
   width: 100%;
-  max-width: 350px; abaixo */
-  margin: 0 auto 20px auto; /* Centraliza a imagem */
+  max-width: 350px; 
+  margin: 0 auto 20px auto; 
 }
 
 .hero-descricao {
   width: 90%;
-  max-width: 600px; /* Reduzi um pouco a largura para o texto não ficar gigante */
+  max-width: 600px; 
   margin: 0 auto;
-  padding-top: 10px; /* Espaço entre a foto e o texto */
+  padding-top: 10px; 
 }
 .hero-descricao .btn-green,
 .hero-descricao .btn-secundario {
-  margin: 10px 5px; /* Margem pequena para os botões não grudarem */
+  margin: 10px 5px; 
 }
 /* --- CORREÇÃO DOS BOTÕES --- */
 .btn-green,
@@ -290,13 +290,13 @@ small {
 }
 /*seçoes dos darrosseis*/
 
-/* 1. O fundo da seção (O espaço escuro geral) */
+
 .secao-carrossel {
   padding: 80px 20px;
   background-color: transparent;
 }
 
-/* 2. O seu "Card Creme" centralizado */
+
 .container {
   background-color: var(--cream);
   max-width: 800px; /* Ajuste conforme necessário */
@@ -311,7 +311,7 @@ small {
 .viewport {
   position: relative;
   width: 100%;
-  height: 450px; /* Garante que o palco tenha altura */
+  height: 450px; 
   margin-top: 20px;
   overflow: hidden;
   background-color: #fdfbf7; /* Cor de fundo de segurança */
@@ -418,7 +418,7 @@ small {
   display: flex;
   justify-content: center;
   align-items: center;
-  pointer-events: none; /* Evita interferência nos cliques */
+  pointer-events: none;  */
 }
 
 .card-item.active {
@@ -430,12 +430,12 @@ small {
 /* 5. Controles (Botões nas laterais) */
 .controles-carrossel {
   position: absolute;
-  bottom: 20px; /* Distância da borda inferior */
-  right: 20px; /* Distância da borda direita */
+  bottom: 20px; 
+  right: 20px; 
   display: flex;
-  gap: 10px; /* Espaço entre os dois botões */
+  gap: 10px; 
   z-index: 10;
-  pointer-events: none; /* Permite clicar através */
+  pointer-events: none; 
 }
 
 /* 6. Estilização dos botões redondos */
@@ -452,7 +452,7 @@ small {
   justify-content: center;
   align-items: center;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
-  transition: all 0.3s ease; /* Esta linha faz a mágica da transição suave */
+  transition: all 0.3s ease;
   color: #333;
 }
 
@@ -460,10 +460,10 @@ small {
 .arrow:hover {
   background-color: var(
     --gold-light
-  ); /* Certifique-se que essa variável existe no seu :root */
-  color: white; /* Muda a cor da seta para branco para contrastar com o gold */
-  transform: scale(1.1); /* Cria um efeito de leve aumento ao passar o mouse */
-  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3); /* Aumenta um pouco a sombra no hover */
+  ); 
+  color: white;  contrastar com o gold */
+  transform: scale(1.1); 
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3); 
 }
 
 .frase-destaque {
@@ -481,7 +481,7 @@ small {
 
 #ambiente-seguro {
   display: grid;
-  /* Ícone (auto) | Texto (ocupa o resto com 1fr) | Botão (auto) */
+  
   grid-template-columns: auto 1fr auto;
   align-items: center;
   gap: 20px;
@@ -491,9 +491,9 @@ small {
   border-radius: 15px;
 }
 
-/* Garante que o texto tenha largura e não seja comprimido pelo grid */
+
 #ambiente-seguro div {
-  min-width: 0; /* Isso é o "pulo do gato" para o texto aparecer no Grid */
+  min-width: 0; 
   overflow: hidden;
 }
 
@@ -503,21 +503,21 @@ small {
   color: var(--coffee-700);
 }
 
-/* Seleciona apenas a imagem que está dentro da section com id ambiente-seguro */
+
 #ambiente-seguro > img {
-  width: 100px; /* Tamanho fixo para o ícone */
+  width: 100px; 
   height: auto;
   display: block;
 }
 
 .btn-whatsapp {
   display: flex;
-  justify-content: center; /* Centraliza o ícone horizontalmente */
-  align-items: center; /* Centraliza o ícone verticalmente */
-  width: 100px; /* Largura do círculo */
-  height: 100px; /* Altura do círculo (igual à largura para ser redondo) */
+  justify-content: center; 
+  align-items: center; 
+  width: 100px; 
+  height: 100px; 
   background-color: var(--cream);
-  border-radius: 50%; /* Isso cria o formato circular */
+  border-radius: 50%; 
   text-decoration: none;
   transition:
     transform 0.3s ease,
@@ -526,7 +526,7 @@ small {
 }
 
 .btn-whatsapp img {
-  width: 60%; /* O ícone vai ocupar 60% do tamanho do círculo */
+  width: 60%; 
   height: auto;
 }
 
