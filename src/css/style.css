@@ -488,7 +488,7 @@ small {
 }
 
 .btn-whatsapp:hover {
-  background-color: var(--gold);
+  background-color: var(--green-2);
   transform: scale(1.1); /* Dá um pulinho quando passa o mouse */
 }
 
