@@ -295,7 +295,7 @@ small {
   left: 0;
   width: 100%;
   height: 100%;
-  opacity: 0; 
+  opacity: 0;
   transition: opacity 0.5s ease-in-out;
   display: flex;
   justify-content: center;
@@ -726,6 +726,9 @@ footer {
   gap: 10px; /* Espaço entre os ícones */
   margin-top: 5px;
   margin-left: 0px;
+  transition: opacity 0.4s ease-in-out, visibility 0.4s;
+  opacity: 1;
+  visibility: visible;
 }
 
 .social-icons a {
@@ -768,10 +771,10 @@ footer {
     display: flex;
   }
   #menu-toggle:checked ~ .social-icons {
-        visibility: hidden; 
-        opacity: 0;        
-        pointer-events: none;
-    }
+    visibility: hidden;
+    opacity: 0;
+    pointer-events: none;
+  }
 
   header nav {
     position: absolute;
@@ -864,8 +867,9 @@ footer {
     margin: 0;
   }
   footer {
+    display: none;
     position: relative;
-    z-index: 10;
+    
     background-color: var(--coffee-950);
     border-top: 1px solid rgba(243, 221, 155, 0.1);
     margin-top: 50px;
@@ -915,52 +919,50 @@ footer {
     display: none;
   }
   /* Esconde a barra no desktop */
-.mobile-footer-actions {
+  .mobile-footer-actions {
     display: none;
-}
+  }
 
-@media (max-width: 820px) {
-    /* Esconde o botão flutuante antigo se você não for mais usá-lo */
-    .btn-whatsapp-float {
-        display: none; 
-    }
+  .btn-whatsapp-float {
+    display: none;
+  }
 
-    /* Estilização da barra fixa */
-    .mobile-footer-actions {
-        display: flex;
-        position: fixed;
-        bottom: 0;
-        left: 0;
-        width: 100%;
-        padding: 10px;
-        background-color: #261b15; /* Cor de fundo escura, ajuste conforme seu tema */
-        z-index: 9999;
-        gap: 10px;
-        box-shadow: 0 -2px 10px rgba(0,0,0,0.2);
-    }
+  /* Estilização da barra fixa */
+  .mobile-footer-actions {
+    display: flex;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    padding: 10px;
+    background-color: #261b15;
+    z-index: 9999;
+    gap: 10px;
+    box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.781);
+  }
 
-    .btn-agendar-fixo {
-        flex: 1;
-        background-color: #25D366; /* Cor verde WhatsApp ou sua cor de destaque */
-        color: white;
-        text-align: center;
-        padding: 15px 0;
-        border-radius: 8px;
-        text-decoration: none;
-        font-weight: bold;
-        font-size: 16px;
-    }
+  .btn-agendar-fixo {
+    flex: 1;
+    background-color: #25d366;
+    color: white;
+    text-align: center;
+    padding: 15px 0;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 16px;
+  }
 
-    .btn-whatsapp-float {
-        display: flex; /* Agora ele faz parte da barra */
-        width: 50px;
-        height: 50px;
-        position: static;
-    }
-    
-    .btn-whatsapp-float img {
-        width: 100%;
-        height: 100%;
-    }
-}
-}
+  .btn-whatsapp-float {
+    display: flex;
+    width: 50px;
+    height: 50px;
+    position: static;
+  }
+
+  .btn-whatsapp-float img {
+    width: 100%;
+    height: 100%;
+  }
+} 
+
