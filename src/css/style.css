@@ -724,7 +724,7 @@ footer {
   display: flex;
   gap: 10px; /* Espaço entre os ícones */
   margin-top: 5px;
-  margin-right: 0px;
+  margin-left: 0px;
 }
 
 .social-icons a {
