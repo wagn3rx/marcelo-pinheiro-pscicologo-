@@ -729,7 +729,7 @@ footer {
 
 .social-icons a {
   color: #c5a059; /* Cor dourada */
-  font-size: 34px;
+  font-size: 30px;
   transition:
     transform 0.3s ease,
     color 0.3s ease;
