@@ -19,12 +19,5 @@ Criar uma interface focada em conversão, que apresente a especialidade do profi
 *   **Redes Sociais:** Ícone de acesso rápido ao **Instagram profissional**.
 *   **Seção de Dúvidas (FAQ):** Respostas rápidas sobre o funcionamento do atendimento.
 
-### 🚀 Como rodar o projeto localmente
-Para visualizar o projeto em sua máquina:
 
-1. Clone este repositório:
-   `git clone [link-do-repositorio]`
-2. Abra o arquivo `index.html` diretamente no seu navegador.
-
----
 *Este projeto faz parte do meu portfólio de desenvolvimento, unindo design clean e foco na experiência do usuário.*
