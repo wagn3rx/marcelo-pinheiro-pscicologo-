@@ -5,7 +5,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
     <title>Marcelo Pinheiro | Psicólogo e Psicanalista</title>
+    <link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin />
     <link rel="stylesheet" href="src/css/style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+      media="print"
+      onload="this.media='all'"
+    />
   </head>
   <body>
     <header>
@@ -29,7 +36,6 @@
           <li><a href="#faq">Dúvidas</a></li>
         </ul>
       </nav>
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 
 <div class="social-icons">
   <a href="https://www.instagram.com/marcelo.pinheiropsi?igsh=eHV2ZWFucXJ3eXpr" target="_blank">
@@ -54,6 +60,9 @@
           <img
             src="src/img/marcelo-atendimento.png"
             alt="Marcelo Pinheiro Psicólogo"
+            loading="eager"
+            decoding="async"
+            fetchpriority="high"
           />
         </div>
         <div class="hero-descricao">
@@ -87,16 +96,18 @@
                 <img
                   src="src/img/adolecente.png"
                   alt="Adolescentes"
+                  loading="lazy"
+                  decoding="async"
                 />
               </div>
               <div class="card-item">
-                <img src="src/img/adulto.png" alt="Adultos" />
+                <img src="src/img/adulto.png" alt="Adultos" loading="lazy" decoding="async" />
               </div>
               <div class="card-item">
-                <img src="src/img/idoso.png" alt="Idosos" />
+                <img src="src/img/idoso.png" alt="Idosos" loading="lazy" decoding="async" />
               </div>
               <div class="card-item">
-                <img src="src/img/card_casais_0b09338c.png" alt="Casais" />
+                <img src="src/img/card_casais_0b09338c.png" alt="Casais" loading="lazy" decoding="async" />
               </div>
             </div>
           </div>
@@ -133,16 +144,20 @@
                 <img
                   src="src/img/primeiro atendimento.png"
                   alt="Primeiro atendimento"
+                  loading="lazy"
+                  decoding="async"
                 />
               </div>
               <div class="card-item">
                 <img
                   src="src/img/sessao acolimento.png"
                   alt="Sessão de acolhimento"
+                  loading="lazy"
+                  decoding="async"
                 />
               </div>
               <div class="card-item">
-                <img src="src/img/acompanhamento.png" alt="Acompanhamento" />
+                <img src="src/img/acompanhamento.png" alt="Acompanhamento" loading="lazy" decoding="async" />
               </div>
             </div>
           </div>
@@ -163,50 +178,21 @@
           </div>
         </div>
       </section>
-
-      <section id="abordagem" class="secao-carrossel">
-        <div class="container">
+ <div class="container">
           <h3>A abordagem</h3>
           <p>Os pilares do meu trabalho.</p>
-          <div class="viewport">
-            <div class="trilho-cards" id="trilhocards-abordagem">
-              <div class="card-item active">
-                <img
-                  src="src/img/card_pilar_escuta_com_foto-eLn669XhgJA6ivJtkopLj7.webp"
-                  alt="Escuta"
-                />
-              </div>
-              <div class="card-item">
-                <img
-                  src="src/img/card_pilar_liberdade_com_foto-nY2MheQiFZpphJN232Aneo.webp"
-                  alt="Liberdade"
-                />
-              </div>
-              <div class="card-item">
-                <img
-                  src="src/img/card_pilar_orientacao_com_foto-iVzDFK7fdtXbtDzUr4NNxV.webp"
-                  alt="Orientação"
-                />
-              </div>
-            </div>
-          </div>
-          <div class="controles-carrossel">
-            <button
-              class="arrow arrow-prev"
-              onclick="moverEsquerda('trilhocards-abordagem')"
-            >
-              ‹
-            </button>
-
-            <button
-              class="arrow arrow-next"
-              onclick="moverDireita('trilhocards-abordagem')"
-            >
-              ›
-            </button>
-          </div>
+      <section id="abordagem" class="secao-abordagem">
+        <div class="imagem-abordagem">
+          <img
+            src="src/img/card_pilar_escuta_com_foto-eLn669XhgJA6ivJtkopLj7.webp"
+            alt="Escuta"
+            loading="lazy"
+            decoding="async"
+          />
         </div>
       </section>
+
+    </div>
 
       <p class="frase-destaque">
         “Falar pode transformar a forma como alguém vive sua própria história.”
@@ -219,19 +205,19 @@
           <div class="viewport">
             <div class="trilho-cards" id="trilhocards-avaliacoes">
               <div class="card-item active">
-                <img src="src/img/depoimento1.png" alt="Avaliação" />
+                <img src="src/img/depoimento1.png" alt="Avaliação" loading="lazy" decoding="async" />
               </div>
               <div class="card-item">
-                <img src="src/img/depoimento 2.png" alt="Avaliação" />
+                <img src="src/img/depoimento 2.png" alt="Avaliação" loading="lazy" decoding="async" />
               </div>
               <div class="card-item">
-                <img src="src/img/depoimento 3.png" alt="Avaliação" />
+                <img src="src/img/depoimento 3.png" alt="Avaliação" loading="lazy" decoding="async" />
               </div>
               <div class="card-item">
-                <img src="src/img/depoimento 4.png" alt="Avaliação" />
+                <img src="src/img/depoimento 4.png" alt="Avaliação" loading="lazy" decoding="async" />
               </div>
               <div class="card-item">
-                <img src="src/img/depoimento 5.png" alt="Avaliação" />
+                <img src="src/img/depoimento 5.png" alt="Avaliação" loading="lazy" decoding="async" />
               </div>
             </div>
           </div>
@@ -254,7 +240,7 @@
       </section>
 
       <section id="ambiente-seguro" class="container">
-        <img src="src/img/ico_shield_fb9d8b6a.png" alt="Ambiente seguro" />
+        <img src="src/img/ico_shield_fb9d8b6a.png" alt="Ambiente seguro" loading="lazy" decoding="async" />
 
         <div>
           <h3>Ambiente seguro e confidencial</h3>
@@ -269,7 +255,7 @@
           target="_blank"
           class="btn-whatsapp"
         >
-          <img src="src/img/whatsapp.png" alt="Ícone WhatsApp" />
+          <img src="src/img/whatsapp.png" alt="Ícone WhatsApp" loading="lazy" decoding="async" />
         </a>
       </section>
 
@@ -280,10 +266,10 @@
           <div class="viewport">
             <div class="trilho-cards" id="trilhocards-ambiente">
               <div class="card-item active">
-                <img src="src/img/consultorio.png" alt="Ambiente" />
+                <img src="src/img/consultorio.png" alt="Ambiente" loading="lazy" decoding="async" />
               </div>
               <div class="card-item">
-                <img src="src/img/consultorio2.png" alt="Ambiente" />
+                <img src="src/img/consultorio2.png" alt="Ambiente" loading="lazy" decoding="async" />
               </div>
             </div>
           </div>
@@ -309,9 +295,8 @@
           <img
             src="src/img/card_localizacao_83be0a2b.png"
             alt="Mapa Marcelo Pinheiro"
-          />
-
-          <a
+            loading="lazy"
+            decoding="async"
             href="https://www.google.com/maps/dir//Marcelo+Pinheiro+%2F+Psic%C3%B3logo+Cl%C3%ADnico+%2F+Vila+Andrade+(Morumbi)+-+CRP+06%2F188151,+Av.+Giovanni+Gronchi,+6195+-+sala+809+-+Vila+Andrade,+S%C3%A3o+Paulo+-+SP,+05727-160/@-23.6384172,-46.757523,15z/data=!4m8!4m7!1m0!1m5!1m1!1s0x94ce5108b77a1273:0x8485f0470786380e!2m2!1d-46.7367151!2d-23.6339733?entry=ttu&g_ep=EgoyMDI2MDYwMS4wIKXMDSoASAFQAw%3D%3D"
             target="_blank"
             class="btn-mapa btn-como-chegar"
@@ -425,7 +410,7 @@
       class="btn-whatsapp-float"
       target="_blank"
     >
-      <img src="src/img/whatsapp.png" alt="WhatsApp" />
+      <img src="src/img/whatsapp.png" alt="WhatsApp" loading="lazy" decoding="async" />
     </a>
 
     <div class="mobile-footer-actions">
