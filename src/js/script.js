@@ -15,46 +15,11 @@ function mover(id, direcao) {
 function moverDireita(id) { mover(id, 'next'); }
 function moverEsquerda(id) { mover(id, 'prev'); }
 
-function fecharExpansaoCarrossel() {
-  document.querySelectorAll('.secao-carrossel .card-item.expanded').forEach((card) => {
-    card.classList.remove('expanded');
-  });
-  document.querySelectorAll('.secao-carrossel .viewport.expanded').forEach((viewport) => {
-    viewport.classList.remove('expanded');
-  });
-}
 
-function toggleExpansaoCarrossel(cardItem) {
-  if (!cardItem) return;
-  const viewport = cardItem.closest('.viewport');
-  const estaExpandido = cardItem.classList.contains('expanded');
 
-  fecharExpansaoCarrossel();
 
-  if (!estaExpandido) {
-    cardItem.classList.add('expanded');
-    viewport?.classList.add('expanded');
-  }
-}
-
-function inicializarExpansaoCarrossel() {
-  document.querySelectorAll('.secao-carrossel .card-item img').forEach((img) => {
-    img.addEventListener('click', (evento) => {
-      evento.stopPropagation();
-      const card = img.closest('.card-item');
-      toggleExpansaoCarrossel(card);
-    });
-  });
-
-  document.addEventListener('click', (evento) => {
-    if (!evento.target.closest('.card-item.expanded')) {
-      fecharExpansaoCarrossel();
-    }
-  });
-}
-
-/* === Opções de FAQ: ajuste aqui quando quiser === */
-const faqHoverDelay = 3000; // tempo em milissegundos para hover antes de expandir
+/*  secao FAQ  */
+const faqHoverDelay = 3000; 
 
 function fecharTodosFaqs(excecaoDetalhe) {
   document.querySelectorAll('.faq-grid details').forEach((detalhe) => {
@@ -83,7 +48,7 @@ function inicializarFaqExpansao() {
       }
       closeTimer = window.setTimeout(() => {
         detalhe.open = false;
-      }, 4000);
+      }, 2000); 
     };
 
     summary?.addEventListener('mouseenter', () => {
@@ -126,8 +91,7 @@ function inicializarFaqExpansao() {
 }
 
 window.addEventListener('DOMContentLoaded', () => {
-  inicializarExpansaoCarrossel();
   inicializarFaqExpansao();
 });
 
-/* Fim das opções de FAQ */
+
