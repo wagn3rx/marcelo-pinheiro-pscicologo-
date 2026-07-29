@@ -974,24 +974,26 @@ footer {
   /* 1. Aumenta a altura da área dos carrosseles no celular */
   .secao-carrossel .viewport {
     height: 480px !important; 
+    min-height: auto !important;
+    overflow: visible !important;
   }
 
-  /* 2. Força a imagem a preencher totalmente o card, eliminando o fundo creme */
+ 
   .secao-carrossel .card-item img {
     width: 100% !important;
     height: 100% !important;
     max-width: 100% !important;
-    max-height: 100% !important;
-    object-fit: cover !important; 
+    max-height: 90% !important;
+    object-fit:initial !important; 
     border: none !important;
   }
 
   .container {
     width: 100% !important;
     max-width: 100% !important;
-    border-radius: 24px !important; 
-    padding-left: 16px !important;
-    padding-right: 16px !important;
+    border-radius: 16px !important; 
+    padding-left: 8px !important;
+    padding-right: 8px !important;
     border: solid; 
     border-color: var(--gold-soft);
   }
@@ -1167,4 +1169,4 @@ footer {
     margin: 0;
   }
 }
-}
+

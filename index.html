@@ -177,22 +177,49 @@
             </button>
           </div>
         </div>
-      </section>
- <div class="container">
+    <section id="abordagem" class="secao-carrossel">
+        <div class="container">
           <h3>A abordagem</h3>
           <p>Os pilares do meu trabalho.</p>
-      <section id="abordagem" class="secao-abordagem">
-        <div class="imagem-abordagem">
-          <img
-            src="src/img/card_pilar_escuta_com_foto-eLn669XhgJA6ivJtkopLj7.jpg"
-            alt="Escuta"
-            loading="lazy"
-            decoding="async"
-          />
+          <div class="viewport">
+            <div class="trilho-cards" id="trilhocards-abordagem">
+              <div class="card-item active">
+                <img
+                  src="src/img/card_pilar_escuta_com_foto-eLn669XhgJA6ivJtkopLj7.jpg"
+                  alt="Escuta"
+                />
+              </div>
+              <div class="card-item">
+                <img
+                  src="src/img/card_pilar_liberdade_com_foto-nY2MheQiFZpphJN232Aneo.jpg"
+                  alt="Liberdade"
+                />
+              </div>
+              <div class="card-item">
+                <img
+                  src="src/img/card_pilar_orientacao_com_foto-iVzDFK7fdtXbtDzUr4NNxV.jpg"
+                  alt="Orientação"
+                />
+              </div>
+            </div>
+          </div>
+          <div class="controles-carrossel">
+            <button
+              class="arrow arrow-prev"
+              onclick="moverEsquerda('trilhocards-abordagem')"
+            >
+              ‹
+            </button>
+
+            <button
+              class="arrow arrow-next"
+              onclick="moverDireita('trilhocards-abordagem')"
+            >
+              ›
+            </button>
+          </div>
         </div>
       </section>
-
-    </div>
 
       <p class="frase-destaque">
         “Falar pode transformar a forma como alguém vive sua própria história.”
