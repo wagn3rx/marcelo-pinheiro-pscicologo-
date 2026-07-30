@@ -270,6 +270,7 @@ small {
 }
 /*seçoes dos carrosseis*/
 
+
 .secao-carrossel {
   padding: 80px 20px;
   background-color: transparent;
@@ -432,6 +433,8 @@ small {
   transition:
     transform 0.3s ease,
     box-shadow 0.3s ease;
+    border-radius: 28px !important;
+  overflow: hidden !important;
 }
 
 .secao-carrossel .card-item.active.expanded img {
