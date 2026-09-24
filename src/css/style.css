@@ -1,5 +1,5 @@
+/* 1. VARIÁVEIS E CONFIGURAÇÕES GLOBAIS */
 :root {
-  /* cores */
   --gold: #c9902f;
   --gold-soft: #e7c56e;
   --gold-light: #f3dd9b;
@@ -19,10 +19,7 @@
   --radius-lg: 26px;
   --ease: cubic-bezier(0.2, 0.8, 0.2, 1);
 
-  /* fontes */
-
-  --font-corpo:
-    "Inter", system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+  --font-corpo: "Inter", system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
   --font-titulo: "Playfair Display SC", "Georgia", serif;
   --font-secundaria: "Playfair Display", "Times New Roman", serif;
 }
@@ -30,42 +27,32 @@
 * {
   margin: 0;
   padding: 0;
-  box-sizing: border-box;
+  box-sizing: border-box !important;
+  
 }
 
 html {
   scroll-behavior: smooth;
 }
 
-.nav-link li a {
-  font-family: var(--font-corpo);
-}
-
 body {
+  
   font-family: var(--font-corpo);
   margin: 0;
   padding: 0;
   min-height: 100vh;
-
-  background:
-    radial-gradient(circle at 50% -20%, var(--gold-soft) 0%, transparent 60%),
-    linear-gradient(180deg, var(--coffee-950) 0%, var(--coffee-800) 100%);
-
+  overflow-x: hidden;
+  background: radial-gradient(circle at 50% -20%, var(--gold-soft) 0%, transparent 60%),
+              linear-gradient(180deg, var(--coffee-950) 0%, var(--coffee-800) 100%);
   background-attachment: fixed;
-  font-family: var(--font-corpo);
 }
 
-main > section,
-main > .frase-destaque,
-main > footer {
-  margin-top: 40px;
-  margin-bottom: 40px;
-  width: 85%;
-}
 
+/* 2. TIPOGRAFIA E ELEMENTOS BASE */
 h1 {
   color: var(--gold);
 }
+
 h2 {
   font-family: var(--font-titulo);
   color: var(--coffee-800);
@@ -77,46 +64,14 @@ h3 {
   text-transform: uppercase;
   letter-spacing: 0.15em;
 }
+
 p {
   font-family: var(--font-corpo);
   font-size: 18px;
 }
 
-/* criando o cabeçalho*/
-header {
-  height: 80px;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  padding: 0 5%;
-  position: sticky;
-  top: 0;
-  z-index: 100;
- 
-
-  backdrop-filter: blur(22px);
-  border-bottom: 1px solid var(--gold-light);
-  box-shadow: var(--shadow);
-
-  background: rgba(107, 76, 53, 0.6);
-
-  backdrop-filter: blur(22px);
-  -webkit-backdrop-filter: blur(22px);
-
-  /*border-bottom: 1px solid rgba(243, 221, 155, 0.22);*/
-  box-shadow: var(--shadow);
-}
-
-.logo {
-  font-family: var(--font-titulo);
-  font-size: 10px;
-
-  color: var(--cream);
-}
-
 small {
   font-family: var(--font-corpo);
-
   display: block;
   font-size: 10px;
   font-weight: 800;
@@ -125,16 +80,78 @@ small {
   color: var(--gold-light);
 }
 
+main > section,
+main > .frase-destaque,
+main > footer {
+  margin-top: 80px;
+  margin-bottom: 40px;
+  width: 85%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+section, 
+.container, 
+.perguntas-frequentes, 
+.section-on-gold,
+.card-wrapper {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.container, 
+.perguntas-frequentes, 
+.section-on-gold {
+  width: 1300px;
+  max-width: 100%;
+}
+
+
+/* 3. CABEÇALHO E NAVEGAÇÃO */
+header {
+  
+  height: 80px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 5%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 100;
+  backdrop-filter: blur(22px);
+  -webkit-backdrop-filter: blur(22px);
+  border-bottom: 1px solid var(--gold-light);
+  box-shadow: var(--shadow);
+  background: rgba(107, 76, 53, 0.6);
+  transition: transform 0.4s ease, opacity 0.4s ease;
+  transform: translateY(0);
+  opacity: 1;
+}
+
+header.hidden {
+  transform: translateY(-100%);
+  opacity: 0;
+  pointer-events: none;
+}
+
+.logo {
+  font-family: var(--font-titulo);
+  font-size: 10px;
+  color: var(--cream);
+}
+
 .nav-link {
   display: flex;
   list-style: none;
   gap: 30px;
-  
 }
 
 .nav-link li a {
   position: relative;
-  font-size: 14px;
+  font-family: var(--font-corpo);
+  font-size: 13px;
   font-weight: 700;
   color: var(--cream-3);
   text-decoration: none;
@@ -142,7 +159,6 @@ small {
   padding-bottom: 5px;
 }
 
-/* Efeito da linha de enbaixo dos links de navegação */
 .nav-link li a::after {
   content: "";
   position: absolute;
@@ -158,6 +174,8 @@ small {
   width: 100%;
 }
 
+
+/* 4. BOTÕES GLOBAIS */
 .btn-green {
   background: linear-gradient(135deg, var(--green) 0%, var(--green-2) 100%);
   color: var(--cream);
@@ -172,41 +190,56 @@ small {
   align-items: center;
 }
 
-.btn-green:hover {
+.btn-green:hover,
+.btn-secundario:hover {
   transform: translateY(-3px);
 }
 
-/* primeira parte do site section inicio*/
+.btn-secundario {
+  background-color: var(--cream);
+  padding: 10px;
+  border-radius: 30px;
+  text-decoration: none;
+  color: var(--coffee-900);
+  position: relative;
+  z-index: 10;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  transition: transform 0.3s var(--ease);
+}
 
-/*  SEÇÃO HERO  */
+
+/* 5. SEÇÃO HERO */
 .hero {
   display: flex;
-  flex-direction: column;
   align-items: center;
-  text-align: center;
-  padding-top: 140px;
-  padding-bottom: 80px;
-  padding-left: 20px;
-  padding-right: 20px;
-  gap: 30px;
+  justify-content: center;
+  padding: 60px 20px;
   width: 100%;
-  overflow: hidden;
-
-  min-height: 1100px;
-
-  background:
-    radial-gradient(
-      circle at 70% 12%,
-      rgba(255, 255, 255, 0.62),
-      transparent 26%
-    ),
-    radial-gradient(
-      circle at 18% 82%,
-      rgba(201, 144, 47, 0.22),
-      transparent 34%
-    ),
-    linear-gradient(135deg, #fff9ef 0%, #f7ead5 42%, #d9ad6a 76%, #8b5a2d 100%);
+  min-height: calc(100vh - 100px);
+  background: radial-gradient(circle at 70% 12%, rgba(255, 255, 255, 0.62), transparent 26%),
+              radial-gradient(circle at 18% 82%, rgba(201, 144, 47, 0.22), transparent 34%),
+              linear-gradient(135deg, #fff9ef 0%, #f7ead5 42%, #d9ad6a 76%, #8b5a2d 100%);
   border-bottom: 1px solid rgba(255, 247, 235, 0.18);
+}
+
+.hero-wrapper {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  gap: 50px;
+  max-width: 1240px;
+  width: 100%;
+  margin: 0 auto;
+}
+
+.hero-descricao {
+  width: 90%;
+  max-width: 800px;
+  margin: 0 auto;
+  padding-top: 10px;
 }
 
 .hero-descricao h2 {
@@ -223,8 +256,13 @@ small {
   margin-bottom: 10px;
 }
 
+.hero-descricao .btn-green,
+.hero-descricao .btn-secundario {
+  margin: 10px 5px;
+}
+
 .hero-image {
-  width: 100%;
+  width: 400px;
   max-width: 1100px;
   margin: 0 auto 24px auto;
 }
@@ -233,53 +271,23 @@ small {
   width: min(100%, 1000px);
   height: auto;
   display: block;
-  border-radius: 56px;
+  border-radius: 36px;
   box-shadow: 0 18px 45px rgba(27, 15, 10, 0.18);
+  border: solid #c9902f;
+  transform: scaleX(-1);
 }
 
-.hero-descricao {
-  width: 90%;
-  max-width: 800px;
-  margin: 0 auto;
-  padding-top: 10px;
-}
 
-.hero-descricao .btn-green,
-.hero-descricao .btn-secundario {
-  margin: 10px 5px;
-}
-/*  CORREÇÃO DOS BOTÕES */
-.btn-green,
-.btn-secundario {
-  background-color: var(--cream);
-  padding: 10px;
-  border-radius: 30px;
-  text-decoration: none;
-  color: var(--coffee-900);
-  position: relative;
-  z-index: 10;
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  transition: transform 0.3s var(--ease);
-}
-
-.btn-green:hover,
-.btn-secundario:hover {
-  transform: translateY(-3px);
-}
-/*seçoes dos carrosseis*/
-
-
+/* 6. CARROSSEL */
 .secao-carrossel {
   padding: 80px 20px;
   background-color: transparent;
 }
 
-.container {
+.secao-carrossel .container {
+  position: relative;
   background-color: var(--cream);
   width: min(96vw, 1240px);
-  max-width: 1240px;
   margin: 0 auto;
   padding: 48px;
   border-radius: 40px;
@@ -290,8 +298,8 @@ small {
 .viewport {
   position: relative;
   width: 100%;
-  height: 550px;
-  margin-top: 20px;
+  height: 560px;
+  margin: 20px 0;
   overflow: hidden;
   background-color: #fdfbf7;
   border-radius: 24px;
@@ -316,112 +324,22 @@ small {
   align-items: center;
   overflow: hidden;
   border-radius: 28px;
-}
-
-.card-item.active {
-  opacity: 1;
-  z-index: 2;
-  
-}
-.card-item img {
-  max-width: 100%;
-  max-height: 100%;
-  width: min(100%, 980px);
-  height: auto;
-  object-fit: contain;
-  display: block;
-  border: 3px solid rgba(255, 255, 255, 0.95);
-  border-radius: 28px;
-  overflow: hidden;
-  background-color: var(--cream);
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.12);
-}
-
-.controles-carrossel {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 20px;
-  margin-top: 20px;
-}
-
-.arrow {
-  background: var(--coffee-950);
-  color: var(--cream);
-  border: none;
-  padding: 10px 20px;
-  border-radius: 50%;
-  cursor: pointer;
-}
-
-.dots-carrossel {
-  display: flex;
-  gap: 8px;
-}
-
-.dot {
-  width: 10px;
-  height: 10px;
-  background: var(--coffee-500);
-  border-radius: 50%;
-}
-
-.dot.active {
-  background: var(--gold);
-}
-
-/*botoes do carrossel*/
-
-.secao-carrossel .container {
-  position: relative;
-}
-
-.viewport {
-  position: relative;
-  width: 100%;
-  height: 560px;
-  overflow: hidden;
-  margin: 20px 0;
-}
-
-/* 3. Trilho: container das imagens */
-.trilho-cards {
-  position: relative;
-  width: 100%;
-  height: 100%;
-}
-
-/* 4. Cards: empilhados com transição de opacidade */
-.card-item {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  opacity: 0;
-  transition: opacity 0.5s ease-in-out;
-  display: flex;
-  justify-content: center;
-  align-items: center;
   pointer-events: none;
 }
 
 .card-item.active {
   opacity: 1;
-  z-index: 1;
+  z-index: 2;
   pointer-events: auto;
 }
 
-
-
-
-.secao-carrossel .card-item.active.expanded {
+.card-item.active.expanded {
   top: -24px;
   z-index: 20;
 }
 
+.card-item img,
 .secao-carrossel .card-item img {
-  
   width: min(100%, 980px);
   height: auto;
   max-height: 100%;
@@ -430,27 +348,19 @@ small {
   border: 3px solid rgba(255, 255, 255, 0.95);
   border-radius: 28px;
   background-color: var(--cream);
-  transition:
-    transform 0.3s ease,
-    box-shadow 0.3s ease;
-    border-radius: 28px !important;
-  overflow: hidden !important;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.12);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  overflow: hidden;
 }
 
-.secao-carrossel .card-item.active.expanded img {
+.card-item.active.expanded img,
+.card-item.expanded img {
   transform: scale(1.12);
   transform-origin: center top;
-  box-shadow: 0 30px 80px rgba(0, 0, 0, 0.9); /* sombra com opacidade 10% */
-}
-
-.secao-carrossel .card-item.active.expanded img,
-.secao-carrossel .card-item.expanded img {
+  box-shadow: 0 30px 80px rgba(0, 0, 0, 0.9);
   cursor: pointer;
 }
 
-/* Fim das opções de expansão do carrossel */
-
-/* 5. Controles (Botões nas laterais) */
 .controles-carrossel {
   position: absolute;
   bottom: 20px;
@@ -461,7 +371,6 @@ small {
   pointer-events: none;
 }
 
-/* 6. Estilização dos botões redondos */
 .arrow {
   pointer-events: auto;
   width: 50px;
@@ -486,7 +395,24 @@ small {
   box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
 }
 
-/* Ajuste específico da seção Abordagem */
+.dots-carrossel {
+  display: flex;
+  gap: 8px;
+}
+
+.dot {
+  width: 10px;
+  height: 10px;
+  background: var(--coffee-500);
+  border-radius: 50%;
+}
+
+.dot.active {
+  background: var(--gold);
+}
+
+
+/* 7. SEÇÕES ESPECÍFICAS */
 .secao-abordagem {
   margin-top: 20px;
   display: flex;
@@ -511,18 +437,6 @@ small {
   display: block;
 }
 
-@media (max-width: 768px) {
-  .controles-carrossel {
-    position: static;
-    justify-content: center;
-    margin-top: 18px;
-  }
-
-  .imagem-abordagem {
-    height: 420px;
-  }
-}
-
 .frase-destaque {
   text-align: center;
   width: min(800px, calc(90% - 32px));
@@ -531,17 +445,15 @@ small {
   line-height: 1.6;
   color: var(--coffee-950);
   font-style: italic;
-  margin: 60px auto 60px;
+  margin: 60px auto;
   border-radius: 24px;
-  border:solid;
-  border-color:  var(--gold-soft);
+  border: solid var(--gold-soft);
   padding: 30px 40px;
   box-shadow: 0 8px 24px rgba(27, 15, 10, 0.08);
 }
 
 #ambiente-seguro {
   display: grid;
-
   grid-template-columns: auto 1fr auto;
   align-items: center;
   gap: 20px;
@@ -549,7 +461,6 @@ small {
   background-color: var(--cream);
   border: 2px solid var(--gold-soft);
   border-radius: 15px;
-  
 }
 
 #ambiente-seguro div {
@@ -578,9 +489,7 @@ small {
   background-color: var(--cream);
   border-radius: 50%;
   text-decoration: none;
-  transition:
-    transform 0.3s ease,
-    background-color 0.3s;
+  transition: transform 0.3s ease, background-color 0.3s;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
 }
 
@@ -592,28 +501,24 @@ small {
 
 .btn-whatsapp:hover {
   background-color: var(--green-2);
-  transform: scale(1.1); /* Dá um pulinho quando passa o mouse */
+  transform: scale(1.1);
 }
 
-/*seção do mapa*/
-
-
+/* 1. MAPA E BOTÕES */
 #localizacao {
-  position: relative; 
+  position: relative;
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 60px 20px;
+  padding: 40px 15px;
   width: 100%;
-  min-height: 600px; 
-  clear: both;
 }
 
 .card-wrapper {
   position: relative;
-  display: inline-block;
-  width: 500px;
-  max-width: 100%;
+  display: block;
+  width: 100%;
+  max-width: 500px;
   margin: 0 auto;
 }
 
@@ -621,62 +526,51 @@ small {
   width: 100%;
   height: auto;
   display: block;
-  border-radius: 40px;
+  border-radius: 30px;
   box-shadow: var(--shadow);
 }
 
-/* Configuração base dos botões */
+/* Base dos botões invisíveis sobre o mapa */
 .btn-mapa {
   position: absolute;
   z-index: 10;
-  width: 170px;
-  height: 50px;
-
-  border-radius: 25px;
+  
+  width: 33%; 
+  height: 10%;
   cursor: pointer;
+  
+  border-radius: 25px;
 }
 
+/* Posição do botão da esquerda (Como chegar) */
 .btn-como-chegar {
-  bottom: 97px;
-  left: 75px;
+  bottom: 15%;
+  left: 15%;
 }
 
-/* Posicionamento do segundo botão (Ver no Maps) */
+/* Posição do botão da direita (Ver no Maps) */
 .btn-ver-maps {
-  bottom: 97px; /* Ajuste aqui a distância do fundo */
-  right: 70px; /* Ajuste aqui a distância da direita */
+  bottom: 15%;
+  right: 15%;
 }
 
-/* Efeito de hover para dar feedback ao usuário */
 .btn-mapa:hover {
   background: rgba(255, 255, 255, 0.2);
 }
 
-/*  SEÇÃO PERGUNTAS FREQUENTES  */
+
+/* 8. PERGUNTAS FREQUENTES (FAQ) */
 .perguntas-frequentes {
   font-size: 30px;
   position: relative;
   color: var(--coffee-950);
-  overflow: visible; 
+  overflow: visible;
   padding: 54px 40px 42px;
-  background:
-    radial-gradient(
-      circle at 100% 0%,
-      rgba(231, 182, 33, 0.616),
-      transparent 28%
-    ),
-    linear-gradient(
-      160deg,
-      rgba(240, 197, 138, 0.98) 0%,
-      rgba(241, 226, 200, 0.98) 55%,
-      rgba(248, 224, 177, 0.98) 100%
-    );
+  background: radial-gradient(circle at 100% 0%, rgba(231, 182, 33, 0.616), transparent 28%),
+              linear-gradient(160deg, rgba(240, 197, 138, 0.98) 0%, rgba(241, 226, 200, 0.98) 55%, rgba(248, 224, 177, 0.98) 100%);
   border: 1px solid rgba(243, 221, 155, 0.52);
   border-radius: var(--radius-xl);
-  box-shadow:
-    var(--shadow),
-    inset 0 1px 0 rgba(255, 255, 255, 0.85),
-    inset 0 0 0 1px rgba(255, 255, 255, 0.36);
+  box-shadow: var(--shadow), inset 0 1px 0 rgba(255, 255, 255, 0.85), inset 0 0 0 1px rgba(255, 255, 255, 0.36);
   max-width: 1200px;
   margin: 40px auto;
 }
@@ -688,31 +582,33 @@ small {
   margin-top: 30px;
 }
 
-/* --- ESTILO DO COMPONENTE DETAILS --- */
 details {
   background: rgba(255, 255, 255, 0.4);
   border: 1px solid rgba(193, 144, 47, 0.2);
   border-radius: 15px;
   padding: 20px;
   cursor: pointer;
-  overflow: hidden;
+  overflow: visible;
+  position: relative;
   transition: all 0.4s ease;
+}
+
+details[open] {
+  z-index: 5;
 }
 
 summary {
   position: relative;
   font-size: 20px;
   font-weight: 700;
-  list-style: none; /* Remove setinha no Firefox */
+  list-style: none;
   outline: none;
 }
 
-/* Esconde a setinha padrão no Chrome/Safari */
 summary::-webkit-details-marker {
   display: none;
 }
 
-/* Linha decorativa na pergunta */
 summary::after {
   content: "";
   position: absolute;
@@ -729,7 +625,6 @@ details[open] summary::after {
   width: 100%;
 }
 
-/* A resposta (p) */
 details p {
   max-height: 0;
   opacity: 0;
@@ -742,7 +637,6 @@ details p {
   margin: 0;
   padding: 0 20px;
   overflow: hidden;
-  border-top: none;
   background: rgba(255, 255, 255, 0.96);
   color: var(--coffee-700);
   line-height: 1.6;
@@ -750,28 +644,9 @@ details p {
   border-radius: 16px;
   z-index: 2;
   transform: translateY(-10px);
-  transition:
-    opacity 0.4s ease,
-    max-height 0.4s ease,
-    padding 0.4s ease,
-    transform 0.4s ease;
+  transition: opacity 0.4s ease, max-height 0.4s ease, padding 0.4s ease, transform 0.4s ease;
 }
 
-details:hover summary {
-  color: var(--coffee-900);
-}
-
-/* Opções de FAQ: ajuste aqui quando quiser  */
-details {
-  overflow: visible;
-  position: relative;
-}
-
-details[open] {
-  z-index: 5;
-}
-
-/* Mostra a resposta quando aberto */
 details[open] p {
   max-height: 800px;
   opacity: 1;
@@ -780,42 +655,12 @@ details[open] p {
   transform: translateY(0);
 }
 
-
-body {
-  overflow-x: hidden;
-}
-
-section, 
-.container, 
-.perguntas-frequentes, 
-.section-on-gold,
-.card-wrapper {
-  margin-left: auto !important;
-  margin-right: auto !important;
-  box-sizing: border-box !important;
+details:hover summary {
+  color: var(--coffee-900);
 }
 
 
-.container, 
-.perguntas-frequentes, 
-.section-on-gold {
-  width: 1300px !important;
-  max-width: 100% !important; 
-}
-
-@keyframes fadeIn {
-  from {
-    opacity: 0;
-    transform: translateY(-10px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-
-/*seção tauvez seja tempo de se escutar*/
-
+/* 9. RODAPÉ E CTA */
 .section-on-gold {
   background: linear-gradient(135deg, var(--green-2) 0%, var(--green) 100%);
   max-width: 1200px;
@@ -826,17 +671,14 @@ section,
 
 .cta-band {
   font-size: 16px;
-
   display: flex;
   justify-content: space-between;
   align-items: center;
   gap: 40px;
 }
+
 .cta-band div {
   flex: 1;
-}
-.btn-green {
-  flex-shrink: 0;
 }
 
 .section-on-gold .cta-band h2 {
@@ -851,11 +693,16 @@ section,
   font-weight: 500;
 }
 
-/* roda pé */
 footer {
-  padding: 30px 50px;
-  height: 80px;
-  background-color: var(--coffee-950);
+  margin-top: 0 !important;
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+
+main > *:last-child,
+section:last-of-type {
+  margin-bottom: 0 !important;
+  padding-bottom: 20px;
 }
 
 .wrap-foot {
@@ -884,38 +731,33 @@ footer {
 .btn-whatsapp-float:hover {
   transform: scale(1.08);
 }
+
 .social-icons {
   display: flex;
-  gap: 10px; /* Espaço entre os ícones */
+  gap: 10px;
   margin-top: 5px;
-  margin-left: 0px;
-  transition:
-    opacity 0.4s ease-in-out,
-    visibility 0.4s;
+  transition: opacity 0.4s ease-in-out, visibility 0.4s;
   opacity: 1;
   visibility: visible;
 }
 
 .social-icons a {
-  color: #c5a059; /* Cor dourada */
+  color: #c5a059;
   font-size: 30px;
-  transition:
-    transform 0.3s ease,
-    color 0.3s ease;
+  transition: transform 0.3s ease, color 0.3s ease;
 }
 
 .social-icons a:hover {
-  color: #fff; /* Muda para branco ao passar o mouse */
-  transform: scale(1.2); /* Efeito de leve aumento */
+  color: #fff;
+  transform: scale(1.2);
 }
 
-/* versao para celular*/
 
+/* 10. MENU MOBILE */
 .menu-toggle {
   display: none;
 }
 
-/* === Cor do botão hambúrguer: troque aqui quando quiser === */
 .hamburger {
   display: none;
   cursor: pointer;
@@ -928,19 +770,15 @@ footer {
 .hamburger span {
   width: 30px;
   height: 3px;
-  background: var(--gold); /* cor atual do hamburger */
+  background: var(--gold);
   border-radius: 2px;
-  transition:
-    background-color 0.3s ease,
-    opacity 0.2s ease,
-    transform 0.2s ease;
+  transition: background-color 0.3s ease, opacity 0.2s ease, transform 0.2s ease;
 }
 
 .hamburger:hover span {
-  background: var(--cream); /* cor ao passar o mouse sobre o menu */
+  background: var(--cream);
 }
 
-/* efeito do menu hamburguer*/
 .hamburger::after {
   content: "";
   position: absolute;
@@ -950,11 +788,8 @@ footer {
   width: 0;
   height: 0;
   border: 6px solid transparent;
-  border-top-color: transparent;
   opacity: 0;
-  transition:
-    opacity 0.2s ease,
-    transform 0.2s ease;
+  transition: opacity 0.2s ease, transform 0.2s ease;
 }
 
 #menu-toggle:checked + .hamburger span {
@@ -971,7 +806,46 @@ footer {
   transform: translate(-50%, -50%) rotate(-45deg);
 }
 
-/*  Fim da   hambúrguer  */
+.mobile-footer-actions {
+  display: none;
+}
+
+
+/* 11. RESPONSIVIDADE */
+@media (max-width: 992px) {
+  .hero-wrapper, 
+  .hero {
+    display: flex;
+    flex-direction: column !important;
+    align-items: center !important;
+    text-align: center !important;
+  }
+
+  .hero-image {
+    order: 1 !important;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    margin: 0 auto 20px auto !important;
+  }
+
+  .hero-image img, 
+  .hero-image .img-container {
+    margin: 0 auto !important;
+    display: block;
+    max-width: 240px;
+    height: auto;
+  }
+
+  .hero-descricao {
+    order: 2 !important;
+    text-align: center !important;
+    width: 100% !important;
+    padding: 0 15px;
+  }
+}
+
 @media (max-width: 820px) {
   body {
     overflow-x: hidden !important;
@@ -980,7 +854,6 @@ footer {
     padding: 0 !important;
   }
 
-  /* Força todas as caixas principais a ocuparem 100% da largura da tela sem sobrar nas laterais */
   .container, 
   .perguntas-frequentes, 
   .section-on-gold {
@@ -988,19 +861,15 @@ footer {
     max-width: 100vw !important;
     margin-left: 0 !important;
     margin-right: 0 !important;
-    left: 0 !important;
-    right: 0 !important;
     border-radius: 0 !important;
     padding-left: 15px !important;
     padding-right: 15px !important;
-    box-sizing: border-box !important;
     border-left: none !important;
     border-right: none !important;
     border-top: solid 1px var(--gold-soft) !important;
     border-bottom: solid 1px var(--gold-soft) !important;
   }
 
-  /* Ajuste do carrossel interno */
   .secao-carrossel {
     width: 100% !important;
     padding: 40px 0 !important;
@@ -1025,7 +894,6 @@ footer {
     border: none !important;
   }
 
-  /* Menu Hambúrguer e Cabeçalho Mobile */
   .hamburger {
     display: flex !important;
     order: 1 !important;
@@ -1085,7 +953,6 @@ footer {
     visibility: visible !important;
   }
 
-  /* Elementos de Conteúdo e Seções */
   .frase-destaque {
     width: 90% !important;
     margin: 20px auto !important;
@@ -1093,7 +960,6 @@ footer {
     display: block !important;
     text-align: center !important;
     word-wrap: break-word !important;
-    border: solid 1px var(--gold-soft) !important;
   }
 
   #ambiente-seguro {
@@ -1121,22 +987,14 @@ footer {
     padding: 30px 20px !important;
   }
 
-  .cta-band .btn-green {
-    display: none !important;
-  }
-
+  .cta-band .btn-green,
   .hero-descricao .btn-green,
   .hero-descricao .btn-secundario {
     display: none !important;
   }
 
-  /* Rodapé e Ações Fixas para Celular */
   footer {
     display: none !important;
-    position: relative !important;
-    background-color: var(--coffee-950) !important;
-    border-top: 1px solid rgba(243, 221, 155, 0.1) !important;
-    margin-top: 50px !important;
   }
 
   .mobile-footer-actions {
@@ -1176,5 +1034,36 @@ footer {
     width: 100% !important;
     height: 100% !important;
     margin: 0 !important;
+  }
+}
+
+@media (min-width: 769px) {
+  .mobile-footer-actions {
+    display: none !important;
+  }
+}
+
+@media (max-width: 768px) {
+  .controles-carrossel {
+    position: static;
+    justify-content: center;
+    margin-top: 18px;
+  }
+
+  .imagem-abordagem {
+    height: 420px;
+  }
+
+  .mobile-footer-actions {
+    display: flex !important;
+    position: fixed !important;
+    bottom: 0 !important;
+    left: 0 !important;
+    width: 100% !important;
+    padding: 10px !important;
+    background-color: #261b15 !important;
+    z-index: 9999 !important;
+    gap: 10px !important;
+    box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.781) !important;
   }
 }

@@ -95,3 +95,20 @@ window.addEventListener('DOMContentLoaded', () => {
 });
 
 
+const header = document.querySelector('header');
+
+window.addEventListener('scroll', () => {
+  const scrollAtual = window.pageYOffset || document.documentElement.scrollTop;
+  
+  // Verifica se chegou no final do site (com uma margem de tolerância de 20 pixels)
+  const chegouNoFim = (window.innerHeight + window.pageYOffset) >= (document.documentElement.scrollHeight - 20);
+
+  // O menu SÓ APARECE se estiver estritamente no topo (<= 10px) OU no final do site
+  if (scrollAtual <= 10 || chegouNoFim) {
+    header.classList.remove('hidden');
+  } 
+  // Em qualquer outro lugar da página (seja rolando para cima ou para baixo), ele fica escondido
+  else {
+    header.classList.add('hidden');
+  }
+});
