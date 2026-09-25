@@ -812,7 +812,7 @@ section:last-of-type {
 
 
 /* 11. RESPONSIVIDADE */
-@media (max-width: 992px) {
+@media (max-width: 768px) {
   .hero-wrapper, 
   .hero {
     display: flex;
@@ -828,6 +828,7 @@ section:last-of-type {
     align-items: center;
     width: 100%;
     margin: 0 auto 20px auto !important;
+    max-width: 280px;
   }
 
   .hero-image img, 
