@@ -197,6 +197,7 @@ header.hidden {
   background: linear-gradient(135deg, var(--green) 0%, var(--green-2) 100%);
   color: var(--cream);
   padding: 14px 24px;
+  min-height: 48px;
   border-radius: 999px;
   border: none;
   cursor: pointer;
@@ -205,6 +206,7 @@ header.hidden {
   text-decoration: none;
   display: inline-flex;
   align-items: center;
+  justify-content: center;
 }
 
 .btn-green:hover,
@@ -259,14 +261,16 @@ header.hidden {
   padding-top: 10px;
 }
 
-.hero-descricao h2 {
-  font-size: 50px;
+.hero-descricao h1 {
+  font-family: var(--font-titulo);
+  font-size: 30px;
+  font-weight: 700;
   margin-bottom: 24px;
   color: var(--coffee-950);
   letter-spacing: -0.035em;
 }
 
-.hero-descricao p {
+.hero-descricao p:not(.hero-eyebrow) {
   font-size: 18px;
   line-height: 1.5;
   color: var(--coffee-800);
@@ -525,10 +529,25 @@ header.hidden {
 #localizacao {
   position: relative;
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
+  gap: 24px;
   padding: 40px 15px;
   width: 100%;
+}
+
+.location-details {
+  max-width: 700px;
+  text-align: center;
+}
+
+.location-details address {
+  margin-top: 12px;
+  color: var(--cream);
+  font-size: 16px;
+  font-style: normal;
+  line-height: 1.5;
 }
 
 .card-wrapper {
@@ -1031,13 +1050,8 @@ section:last-of-type {
 
   .btn-agendar-fixo {
     flex: 1 !important;
-    background-color: #25d366 !important;
-    color: white !important;
+    min-width: 0 !important;
     text-align: center !important;
-    padding: 15px 0 !important;
-    border-radius: 8px !important;
-    text-decoration: none !important;
-    font-weight: bold !important;
     font-size: 16px !important;
   }
 

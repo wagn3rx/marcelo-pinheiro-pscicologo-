@@ -1,15 +1,22 @@
 function mover(id, direcao) {
     const trilho = document.getElementById(id);
-    const cards = trilho.querySelectorAll('.card-item');
-    let ativo = trilho.querySelector('.card-item.active');
-    let index = Array.from(cards).indexOf(ativo);
+  if (!trilho) return;
 
-    let novoIndex = direcao === 'next' 
-        ? (index < cards.length - 1 ? index + 1 : 0)
-        : (index > 0 ? index - 1 : cards.length - 1);
+  const cards = Array.from(trilho.querySelectorAll('.card-item'));
+  if (cards.length === 0) return;
 
-    cards[index].classList.remove('active');
-    cards[novoIndex].classList.add('active');
+  const indiceAtivo = cards.findIndex((card) => card.classList.contains('active'));
+  if (indiceAtivo === -1) {
+    cards[0].classList.add('active');
+    return;
+  }
+
+  const novoIndice = direcao === 'next'
+    ? (indiceAtivo < cards.length - 1 ? indiceAtivo + 1 : 0)
+    : (indiceAtivo > 0 ? indiceAtivo - 1 : cards.length - 1);
+
+  cards[indiceAtivo].classList.remove('active');
+  cards[novoIndice].classList.add('active');
 }
 
 function moverDireita(id) { mover(id, 'next'); }
