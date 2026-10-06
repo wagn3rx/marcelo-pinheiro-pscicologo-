@@ -49,6 +49,12 @@
       }
     </script>
     <link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Playfair+Display:wght@400;700&family=Playfair+Display+SC:wght@400;700&display=swap"
+    />
     <link rel="stylesheet" href="src/css/style.css" />
     <link
       rel="stylesheet"
@@ -63,13 +69,18 @@
         <span>Marcelo Pinheiro.</span>
         <small>Psicólogo • Psicanalista<br />CRP 06/188151</small>
       </div>
-      <input type="checkbox" id="menu-toggle" class="menu-toggle" />
-      <label for="menu-toggle" class="hamburger">
-        <span></span>
-        <span></span>
-        <span></span>
-      </label>
-      <nav>
+      <button
+        type="button"
+        class="menu-toggle hamburger"
+        aria-label="Abrir menu"
+        aria-expanded="false"
+        aria-controls="primary-navigation"
+      >
+        <span aria-hidden="true"></span>
+        <span aria-hidden="true"></span>
+        <span aria-hidden="true"></span>
+      </button>
+      <nav id="primary-navigation">
         <ul class="nav-link">
           <li><a href="#atendimento">Atendimento</a></li>
           <li><a href="#como-funciona">Como funciona</a></li>
@@ -145,8 +156,8 @@
             </div>
           </div>
           <div class="controles-carrossel">
-            <button class="arrow arrow-prev" onclick="moverEsquerda('trilhocards-atendimento')">‹</button>
-            <button class="arrow arrow-next" onclick="moverDireita('trilhocards-atendimento')">›</button>
+            <button type="button" class="arrow arrow-prev" aria-label="Ver imagem anterior: atendimento" aria-controls="trilhocards-atendimento" onclick="moverEsquerda('trilhocards-atendimento')">‹</button>
+            <button type="button" class="arrow arrow-next" aria-label="Ver próxima imagem: atendimento" aria-controls="trilhocards-atendimento" onclick="moverDireita('trilhocards-atendimento')">›</button>
           </div>
         </div>
       </section>
@@ -171,8 +182,8 @@
             </div>
           </div>
           <div class="controles-carrossel">
-            <button class="arrow arrow-prev" onclick="moverEsquerda('trilhocards-funcionamento')">‹</button>
-            <button class="arrow arrow-next" onclick="moverDireita('trilhocards-funcionamento')">›</button>
+            <button type="button" class="arrow arrow-prev" aria-label="Ver imagem anterior: como funciona" aria-controls="trilhocards-funcionamento" onclick="moverEsquerda('trilhocards-funcionamento')">‹</button>
+            <button type="button" class="arrow arrow-next" aria-label="Ver próxima imagem: como funciona" aria-controls="trilhocards-funcionamento" onclick="moverDireita('trilhocards-funcionamento')">›</button>
           </div>
         </div>
       </section>
@@ -195,8 +206,8 @@
             </div>
           </div>
           <div class="controles-carrossel">
-            <button class="arrow arrow-prev" onclick="moverEsquerda('trilhocards-abordagem')">‹</button>
-            <button class="arrow arrow-next" onclick="moverDireita('trilhocards-abordagem')">›</button>
+            <button type="button" class="arrow arrow-prev" aria-label="Ver imagem anterior: abordagem psicanalítica" aria-controls="trilhocards-abordagem" onclick="moverEsquerda('trilhocards-abordagem')">‹</button>
+            <button type="button" class="arrow arrow-next" aria-label="Ver próxima imagem: abordagem psicanalítica" aria-controls="trilhocards-abordagem" onclick="moverDireita('trilhocards-abordagem')">›</button>
           </div>
         </div>
       </section> 
@@ -229,8 +240,8 @@
             </div>
           </div>
           <div class="controles-carrossel">
-            <button class="arrow arrow-prev" onclick="moverEsquerda('trilhocards-avaliacoes')">‹</button>
-            <button class="arrow arrow-next" onclick="moverDireita('trilhocards-avaliacoes')">›</button>
+            <button type="button" class="arrow arrow-prev" aria-label="Ver avaliação anterior" aria-controls="trilhocards-avaliacoes" onclick="moverEsquerda('trilhocards-avaliacoes')">‹</button>
+            <button type="button" class="arrow arrow-next" aria-label="Ver próxima avaliação" aria-controls="trilhocards-avaliacoes" onclick="moverDireita('trilhocards-avaliacoes')">›</button>
           </div>
         </div>
       </section>
@@ -263,8 +274,8 @@
             </div>
           </div>
           <div class="controles-carrossel">
-            <button class="arrow arrow-prev" onclick="moverEsquerda('trilhocards-ambiente')">‹</button>
-            <button class="arrow arrow-next" onclick="moverDireita('trilhocards-ambiente')">›</button>
+            <button type="button" class="arrow arrow-prev" aria-label="Ver imagem anterior: consultório" aria-controls="trilhocards-ambiente" onclick="moverEsquerda('trilhocards-ambiente')">‹</button>
+            <button type="button" class="arrow arrow-next" aria-label="Ver próxima imagem: consultório" aria-controls="trilhocards-ambiente" onclick="moverDireita('trilhocards-ambiente')">›</button>
           </div>
         </div>
       </section>

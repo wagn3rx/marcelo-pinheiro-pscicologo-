@@ -23,8 +23,6 @@ function moverDireita(id) { mover(id, 'next'); }
 function moverEsquerda(id) { mover(id, 'prev'); }
 
 
-
-
 /*  secao FAQ  */
 const faqHoverDelay = 3000; 
 
@@ -101,8 +99,29 @@ window.addEventListener('DOMContentLoaded', () => {
   inicializarFaqExpansao();
 });
 
-
 const header = document.querySelector('header');
+const menuToggle = document.querySelector('.menu-toggle');
+const primaryNavigation = document.querySelector('#primary-navigation');
+
+function setMenuOpen(isOpen) {
+  menuToggle.setAttribute('aria-expanded', String(isOpen));
+  menuToggle.setAttribute('aria-label', isOpen ? 'Fechar menu' : 'Abrir menu');
+}
+
+menuToggle?.addEventListener('click', () => {
+  setMenuOpen(menuToggle.getAttribute('aria-expanded') !== 'true');
+});
+
+primaryNavigation?.querySelectorAll('a').forEach((link) => {
+  link.addEventListener('click', () => setMenuOpen(false));
+});
+
+document.addEventListener('keydown', (event) => {
+  if (event.key === 'Escape' && menuToggle?.getAttribute('aria-expanded') === 'true') {
+    setMenuOpen(false);
+    menuToggle.focus();
+  }
+});
 
 window.addEventListener('scroll', () => {
   const scrollAtual = window.pageYOffset || document.documentElement.scrollTop;
