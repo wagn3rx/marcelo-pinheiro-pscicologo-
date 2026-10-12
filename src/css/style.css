@@ -274,6 +274,10 @@ header.hidden {
   letter-spacing: -0.035em;
 }
 
+.hero-descricao h1 .hero-localizacao {
+  letter-spacing: 0.02em;
+}
+
 .hero-descricao p:not(.hero-eyebrow) {
   font-size: 18px;
   line-height: 1.5;
